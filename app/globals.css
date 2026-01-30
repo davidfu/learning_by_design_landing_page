@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-ivory: #fffff0;
+  --color-copper: #b87333;
+  --color-mint: #1bbe90;
+  --color-british-racing-green: #143b22;
+  --color-bistro-brown: #3b2214;
+
+  /* Semantic */
+  --background: 0 0% 0%;
+  --foreground: 60 100% 97%;
+  --card: 0 0% 0%;
+  --card-foreground: 60 100% 97%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 60 100% 97%;
+  --primary: 160 74% 42%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 30 56% 46%;
+  --secondary-foreground: 60 100% 97%;
+  --muted: 20 47% 16%;
+  --muted-foreground: 60 100% 97%;
+  --accent: 160 74% 42%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 20 47% 16%;
+  --input: 20 47% 16%;
+  --ring: 160 74% 42%;
+  --radius: 0.5rem;
+
+  /* Typography */
+  --font-serif: var(--font-lora), "Georgia", serif;
+  --font-sans: var(--font-dm-sans), "Helvetica Neue", sans-serif;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+}
