@@ -6,12 +6,15 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 })
 
 const lora = Lora({
   subsets: ["latin"],
   variable: "--font-lora",
   display: "swap",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 })
 
 export const metadata: Metadata = {
@@ -31,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${lora.variable}`}>
-      <body>{children}</body>
+      <body className="font-serif">{children}</body>
     </html>
   )
 }

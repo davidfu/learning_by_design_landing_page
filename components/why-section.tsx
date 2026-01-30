@@ -36,18 +36,18 @@ const people = [
 
 const shortTestimonials = [
   {
-    icon: "$",
+    icon: "\u{1F4B0}",
     quote:
       "Thanks for being real with me and thinking through tradeoffs, optimization, and cofounder equity.",
     cite: "~ from a founder who successfully raised a round",
   },
   {
-    icon: "E",
+    icon: "\u{1F392}",
     quote: "Thanks for all your thoughts. You're extremely knowledgeable about this space.",
     cite: "~ from a founder about edtech",
   },
   {
-    icon: "H",
+    icon: "\u{2764}\u{FE0F}",
     quote:
       "Really glad I talked to you before leaving to deal with a personal family situation; I was able to be there with them in their last moments and support my mom afterwards before returning to build my startup.",
     cite: "~ from a founder navigating life",
@@ -58,12 +58,12 @@ export function WhySection() {
   return (
     <section id="why" className="py-16">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h2 className="mb-8 text-center font-sans text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold text-white text-balance">
+        <h2 className="mb-8 text-center text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold text-white text-balance">
           Not just a consultant. A cross-functional co-builder, powered by a powerful network.
         </h2>
 
         <div className="mb-10 flex justify-center">
-          <div className="flex h-[200px] w-[200px] items-center justify-center rounded-full bg-[#1bbe90] p-1 text-6xl font-bold text-black shadow-[0_0_0_4px_white]">
+          <div className="flex h-[200px] w-[200px] items-center justify-center rounded-full bg-white p-1 text-6xl font-bold text-black shadow-[0_0_0_4px_white]">
             DF
           </div>
         </div>
@@ -74,7 +74,7 @@ export function WhySection() {
               key={index}
               className="rounded-md border border-[#3b2214] bg-[rgba(27,59,34,0.2)] p-8"
             >
-              <h3 className="mb-4 font-sans text-lg font-semibold text-[#1bbe90]">
+              <h3 className="mb-4 text-lg font-semibold text-[#1bbe90]">
                 {reason.title}
               </h3>
               <p className="text-[#fffff0]">{reason.description}</p>
@@ -82,7 +82,7 @@ export function WhySection() {
           ))}
         </div>
 
-        <h3 className="mb-8 text-center font-sans text-lg font-semibold text-[#1bbe90]">
+        <h3 className="mb-8 text-center text-lg font-semibold text-[#1bbe90]">
           {"People we've worked with include"}
         </h3>
         <div className="mb-16 grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -91,7 +91,7 @@ export function WhySection() {
               <div className="mx-auto mb-2 flex h-20 w-20 items-center justify-center rounded-full bg-[#3b2214] text-2xl font-bold text-[#fffff0]">
                 {person.initials}
               </div>
-              <p className="font-sans text-[15px] font-semibold text-white">{person.name}</p>
+              <p className="text-[15px] font-semibold text-white">{person.name}</p>
               <p className="text-[13px] leading-snug text-[#fffff0]">{person.desc}</p>
             </div>
           ))}
@@ -115,7 +115,7 @@ export function WhySection() {
             href="https://bit.ly/lxd_working_session"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center justify-center rounded bg-[#1bbe90] px-6 py-3.5 font-sans text-[15px] font-semibold text-black transition-colors hover:bg-white"
+            className="inline-flex items-center justify-center rounded bg-[#1bbe90] px-6 py-3.5 text-[15px] font-semibold text-black transition-colors hover:bg-white"
           >
             Book a 30-minute intro
           </Link>

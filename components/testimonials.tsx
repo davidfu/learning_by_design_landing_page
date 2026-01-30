@@ -40,7 +40,7 @@ export function Testimonials() {
         <div className="flex flex-col gap-16">
           {testimonials.map((t) => (
             <article key={t.name} className="grid items-start gap-8 sm:grid-cols-[80px_1fr]">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#3b2214] text-2xl font-bold text-[#fffff0]">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#3b2214] font-sans text-2xl font-bold text-[#fffff0]">
                 {t.initials}
               </div>
               <div>

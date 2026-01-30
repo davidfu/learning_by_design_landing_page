@@ -24,7 +24,7 @@ export function Footer() {
             Learning By Design
           </span>
         </Link>
-        <p className="text-[13px] text-[#b87333]">
+        <p className="font-sans text-[13px] text-[#b87333]">
           © Learning By Design LLC. All rights reserved.
         </p>
       </div>
