@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 28" fill="none" aria-hidden="true">
+  <!-- L: block capital L, monolinear -->
+  <path fill="#ffffff" d="M0 0h5v20h12v5H0V0Z"/>
+  <!-- X: upward V -->
+  <path fill="#ffffff" d="M24 28L32 14L40 28H24Z"/>
+  <!-- X: downward V -->
+  <path fill="#ffffff" d="M24 0L32 14L40 0H24Z"/>
+  <!-- D: vertical bar + smooth rounded right (one curve, not two lobes like B) -->
+  <path fill="#ffffff" d="M48 0L48 28H54C58 28 62 14 54 0H48Z"/>
+</svg>
