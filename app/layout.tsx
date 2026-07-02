@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+
+// Set NEXT_PUBLIC_GA_ID (e.g. "G-XXXXXXXXXX") in Vercel → Project → Environment
+// Variables. When unset (local dev, previews), analytics is simply not loaded.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -83,6 +88,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollReveal />
+        {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
       </body>
     </html>
   );

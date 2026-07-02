@@ -1,7 +1,8 @@
 "use client";
 
-// Data-driven logo bands. To add a logo: drop the file in public/assets/logos/
-// and add an entry here. `dark: true` puts it on a dark chip (for white logos).
+// Data-driven logo bands, each an infinite-scroll carousel. To add a logo: drop
+// the file in public/assets/logos/ and add an entry here. `dark: true` puts it on
+// a dark chip (for white/reversed logos).
 type Logo = { name: string; file: string; dark?: boolean };
 
 const clients: Logo[] = [
@@ -45,24 +46,40 @@ const backers: Logo[] = [
   { name: "MSDF", file: "msdf.svg" },
 ];
 
-function Band({ label, logos }: { label: string; logos: Logo[] }) {
+function Chip({ logo, ariaHidden }: { logo: Logo; ariaHidden: boolean }) {
+  return (
+    <span className={`lchip${logo.dark ? " dark" : ""}`} data-name={logo.name} aria-hidden={ariaHidden || undefined}>
+      <img
+        src={`/assets/logos/${logo.file}`}
+        alt={ariaHidden ? "" : logo.name}
+        onError={(e) => {
+          const img = e.currentTarget;
+          img.style.display = "none";
+          img.parentElement?.classList.add("noimg");
+        }}
+      />
+    </span>
+  );
+}
+
+// One band = an infinite marquee. The track holds 4 copies of the row so a single
+// "half" is always wider than the viewport; the CSS animates it by -50% for a
+// seamless loop. Speed is kept consistent (~2.6s per logo) regardless of row length.
+function Band({ label, logos, reverse }: { label: string; logos: Logo[]; reverse?: boolean }) {
+  const copies = 4;
+  const durationSec = Math.round(logos.length * 5.2);
   return (
     <div className="logoband reveal">
       <div className="lab">{label}</div>
-      <div className="logorow">
-        {logos.map((l) => (
-          <span key={l.name} className={`lchip${l.dark ? " dark" : ""}`} data-name={l.name}>
-            <img
-              src={`/assets/logos/${l.file}`}
-              alt={l.name}
-              onError={(e) => {
-                const img = e.currentTarget;
-                img.style.display = "none";
-                img.parentElement?.classList.add("noimg");
-              }}
-            />
-          </span>
-        ))}
+      <div className="logomarquee">
+        <div
+          className={`logotrack${reverse ? " rev" : ""}`}
+          style={{ ["--dur" as string]: `${durationSec}s` }}
+        >
+          {Array.from({ length: copies }).flatMap((_, copy) =>
+            logos.map((l, i) => <Chip key={`${copy}-${i}`} logo={l} ariaHidden={copy > 0} />)
+          )}
+        </div>
       </div>
     </div>
   );
@@ -72,7 +89,7 @@ export default function LogoStrip() {
   return (
     <>
       <Band label="Clients we've worked with" logos={clients} />
-      <Band label="We've upskilled leaders in product & AI from" logos={upskilled} />
+      <Band label="We've upskilled leaders in product & AI from" logos={upskilled} reverse />
       <Band label="Our clients are backed by" logos={backers} />
     </>
   );

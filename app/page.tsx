@@ -47,42 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SUBSTACK */}
-      <section className="substack" id="substack">
-        <div className="wrap">
-          <div className="reveal">
-            <div className="eyebrow">On our Substack</div>
-            <h2>AI By Design — notes from the build.</h2>
-            <p>
-              Field notes on building AI-native product and GTM: what actually works, what breaks
-              in the last 20%, and the moves we make with clients. New posts land on our Substack.
-            </p>
-            <div className="ss-cta">
-              <a className="btn gold" href="/blog">
-                Read all posts &rarr;
-              </a>
-              <a
-                className="btn ghost"
-                href="https://learningbydesign.substack.com"
-                target="_blank"
-                rel="noopener"
-              >
-                Open on Substack
-              </a>
-            </div>
-          </div>
-          <div className="substack-embed reveal">
-            <iframe
-              src="https://learningbydesign.substack.com/embed"
-              width={480}
-              height={320}
-              scrolling="no"
-              title="Subscribe to Learning By Design AI on Substack"
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+      {/* SUBSTACK — hidden (kept in git history; nav "Writing" link + /blog page remain) */}
 
       {/* LOGOS */}
       <section className="logos">
@@ -394,80 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SPIKY POVs */}
-      <section id="pov" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <div className="eyebrow">Where we&rsquo;re opinionated</div>
-            <h2>A few things we&rsquo;ll tell you that others won&rsquo;t.</h2>
-          </div>
-          <div className="povs">
-            <div className="pov reveal">
-              <div className="n">On outbound</div>
-              <h3>Cold email is broken.</h3>
-              <p>
-                Don&rsquo;t pour money into it until you&rsquo;re well past <b>$500K ARR</b>. We help
-                you build the skills and hire an offshore BDR for hyper-personalized, human-driven
-                outbound that actually gets replies and meetings, running ongoing at{" "}
-                <b>under $1,500 a month</b> once ramped.
-              </p>
-            </div>
-            <div className="pov reveal">
-              <div className="n">On building with AI</div>
-              <h3>The last 20% is the whole job.</h3>
-              <p>
-                AI gets you a prototype in an afternoon. Getting it into your real stack, your cloud,
-                your data is where <b>70% faster quietly becomes 15%</b>. That gap is exactly where
-                we live.
-              </p>
-            </div>
-            <div className="pov reveal">
-              <div className="n">On your stack</div>
-              <h3>Faster typing isn&rsquo;t AI-native.</h3>
-              <p>
-                Engineers using a chatbot to type faster is not the same as an AI-native practice.
-                We stand up the <b>agentic build loops</b> that compound, so speed comes from the
-                system, not from one person going faster.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LEAD MAGNET / WEDGE */}
-      <section id="wedge" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="wedge reveal">
-            <div>
-              <div className="eyebrow" style={{ color: "#7a5a26" }}>
-                Start here · the on-ramp
-              </div>
-              <h2>Everyone needs to get off website builders.</h2>
-              <p>
-                Webflow, Squarespace, Wix, and WordPress limit customization, speed, and your
-                ability to use AI to spin up new pages, offers, case studies, and posts on demand.
-                We migrate you to a custom stack on Vercel or Netlify, preserving your SEO and
-                everything already working, so your site becomes something you and your AI/agents can
-                build on.
-              </p>
-              <p className="proof">
-                Already done it: one client off Webflow, an insurtech company in progress.
-              </p>
-            </div>
-            <div className="wedge-card">
-              <div className="big">Website migration</div>
-              <div className="price">starts at $5,000</div>
-              <p>
-                About half what most shops charge. Add-ons: SEO/AEO, larger page sets, email lists.
-                A concrete first project that pays for itself.
-              </p>
-              <a className="btn gold" href="https://cal.com/davidfu/30min">
-                Book a call
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* SPIKY POVs + LEAD MAGNET / WEDGE — hidden (kept in git history) */}
 
       {/* PROOF / CASE STUDIES */}
       <section id="work">
@@ -543,35 +435,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="group-label reveal">
-            Practice building · turning bespoke delivery into a product, an ICP, and a GTM system
-          </div>
-          <div className="cards">
-            <div className="case reveal">
-              <div className="nm">JFF Labs</div>
-              <div className="meta">Innovation arm, Jobs for the Future</div>
-              <div className="stat">Published</div>
-              <div className="statlabel">
-                GenAI-in-workforce-dev landscape report; productization roadmap; mid-market ICP found
-              </div>
-            </div>
-            <div className="case reveal">
-              <div className="nm">Shine / Acelero</div>
-              <div className="meta">Scaled early-childhood provider · BlackRock-backed</div>
-              <div className="stat">5 areas</div>
-              <div className="statlabel">
-                AI-accelerated roadmaps; a reusable buy/build/partner decision framework
-              </div>
-            </div>
-            <div className="case reveal">
-              <div className="nm">Imagine Worldwide</div>
-              <div className="meta">Pan-African K12 edtech &amp; efficacy nonprofit</div>
-              <div className="stat">4 countries</div>
-              <div className="statlabel">
-                AI product + partner landscape; a next-phase roadmap for leadership
-              </div>
-            </div>
-          </div>
+          {/* "Practice building" case-study group — hidden (kept in git history) */}
 
           <div className="group-label reveal">
             AI-native product builds · the build team, led by Vedansh
@@ -608,10 +472,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head reveal">
             <div className="eyebrow">The team</div>
-            <h2>
-              Real builders who roll up their sleeves. Not consultants who leave you with playbooks
-              without execution. Not just advice or strategy.{" "}
-            </h2>
+            {/* subhead hidden (kept in git history) */}
           </div>
           <div className="team-grid">
             <div className="person lead reveal">
@@ -723,8 +584,8 @@ export default function Home() {
               the right way.
             </h2>
             <p>
-              Book a call with David and Vedansh. Bring your site or your stack and we&rsquo;ll give
-              you a real read on your product and GTM, and whether we&rsquo;re a fit.
+              Book a call with David and Vedansh. Bring your ideas and challenges, and we&rsquo;ll
+              give you a real read on product, GTM, and AI.
             </p>
             <a
               className="btn gold"
