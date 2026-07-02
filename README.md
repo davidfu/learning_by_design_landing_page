@@ -1,39 +1,51 @@
-# Learning By Design AI — landing site
+# Learning By Design AI — site
 
-Static marketing site for [learningbydesign.ai](https://learningbydesign.ai), deployed on Vercel.
+Marketing site for [learningbydesign.ai](https://learningbydesign.ai). **Next.js (App Router, TypeScript)**, deployed on Vercel.
 
 ## Structure
 
 ```
-index.html              Landing page
-blog.html               "Writing" page — lists all Substack posts
-api/substack-feed.js    Serverless function: fetches + parses the Substack RSS (server-side, no CORS)
-assets/logos/           Client / investor / upskilling logos (served copies)
-assets/og-image.png     1200×630 social share image
-vercel.json             Clean URLs + long-cache headers for /assets
-robots.txt, sitemap.xml SEO
+app/
+  layout.tsx            Root layout: fonts (next/font), SEO metadata, JSON-LD, Header/Footer
+  globals.css           All styling (hand-written CSS — unchanged from the original design)
+  page.tsx              Landing page
+  blog/page.tsx         "Writing" page — server-renders every Substack post (ISR, hourly)
+  api/substack-feed/    JSON endpoint mirroring the feed (optional; blog renders server-side)
+components/
+  Header.tsx            Nav + mobile menu (client)
+  Footer.tsx
+  ScrollReveal.tsx      Scroll-in animations (client)
+  LogoStrip.tsx         Client/investor/upskilling logos — edit the arrays to add logos
+lib/substack.ts         Fetches + parses the Substack RSS (zero-dependency)
+public/
+  assets/logos/         Logo images
+  assets/og-image.png   1200×630 social share image
+  robots.txt, sitemap.xml
+  revenue-os.html, css/, js/   Legacy page, kept so its URL keeps resolving
 ```
 
-## Local preview
-
-It's a static site plus one serverless function. Easiest full-fidelity preview:
+## Develop
 
 ```bash
-npx vercel dev     # serves index.html + the /api/substack-feed function
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
-
-Or just open `index.html` in a browser (the blog feed needs the serverless function,
-so it falls back to a "read on Substack" link when opened as a bare file).
 
 ## Deploy
 
-Connected to Vercel via GitHub — every push to `main` deploys automatically.
-No build step; Vercel serves the static files and runs `api/` as Node functions.
+Connected to Vercel via GitHub — pushes to `main` deploy to production. Vercel auto-detects
+Next.js from `package.json` (no config needed). If the project's Framework Preset was previously
+pinned to "Other/Static", set it to **Next.js** in Project Settings → Build & Development.
 
 ## The Substack feed
 
-`blog.html` calls `/api/substack-feed`, which fetches
-`https://learningbydesign.substack.com/feed`, parses the RSS, and returns JSON.
-Results are edge-cached for 1 hour. New Substack posts appear automatically —
-nothing to redeploy. If the feed is ever unreachable, the page degrades to a
+`lib/substack.ts` fetches `https://learningbydesign.substack.com/feed`, parses the RSS, and the
+blog page renders the posts **server-side** (good for SEO) with hourly revalidation (ISR). New
+posts appear automatically — no redeploy. If the feed is unreachable, the page degrades to a
 "read them all on Substack" link.
+
+## Adding a logo
+
+Drop the file in `public/assets/logos/` and add an entry to the relevant array in
+`components/LogoStrip.tsx` (`{ name, file, dark? }`). Set `dark: true` for white/reversed logos.
