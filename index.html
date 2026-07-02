@@ -1,489 +1,852 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning By Design – AI-native GTM, Product & Education</title>
-  <meta name="description" content="I help education and B2B teams turn fuzzy ideas and messy pipelines into focused offers, clean CRM habits, and repeatable revenue." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning By Design AI — AI-native product & GTM, built with your team</title>
+<meta name="description" content="Learning By Design AI is an AI enablement team for B2B and edtech companies. We build your AI-native product or GTM engine with you — then hand your team the keys. Product By Design AI & GTM By Design AI.">
+<meta name="author" content="Learning By Design AI">
+<link rel="canonical" href="https://learningbydesign.ai/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1E3A5F">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learning By Design AI">
+<meta property="og:url" content="https://learningbydesign.ai/">
+<meta property="og:title" content="Learning By Design AI — AI-native product & GTM, built with your team">
+<meta property="og:description" content="An AI enablement team for B2B and edtech companies. We build your AI-native product or GTM engine with you — then hand your team the keys.">
+<meta property="og:image" content="https://learningbydesign.ai/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learning By Design AI — AI-native product & GTM, built with your team">
+<meta name="twitter:description" content="An AI enablement team for B2B and edtech companies. We build your AI-native product or GTM engine with you — then hand your team the keys.">
+<meta name="twitter:image" content="https://learningbydesign.ai/assets/og-image.png">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/logos/logo-lxd.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logos/logo-lxd.svg">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Learning By Design AI",
+  "alternateName": "LXD",
+  "url": "https://learningbydesign.ai/",
+  "description": "An AI enablement team for B2B and edtech companies. We build AI-native product and GTM engines with your team.",
+  "sameAs": [
+    "https://linkedin.com/company/learningxdesign",
+    "https://learningbydesign.substack.com"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "David Fu"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF6EE; --paper2:#F2EADA; --gold:#FAD392; --gold-soft:#FFF3DC;
+    --orange:#B87030; --orange-soft:#F6E3D2; --navy:#1E3A5F; --navy-soft:#DDE6EF;
+    --peach:#FFDFCA; --ink:#081828; --muted:#55606E; --line:#E8DEC9; --white:#fff;
+    --display:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+    --wrap:1140px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0}
+  .eyebrow{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--orange)}
+  p{margin:0 0 1em}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.86);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:24px;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;
+    font-size:17px;text-decoration:none;letter-spacing:.01em}
+  .logo{width:34px;height:34px;background:var(--ink);color:var(--gold);border-radius:7px;
+    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.04em}
+  .nav-links{display:flex;gap:26px;margin-left:auto;align-items:center}
+  .nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;
+    font-size:15px;text-decoration:none;border-radius:10px;padding:11px 18px;border:1.5px solid var(--ink);
+    background:var(--ink);color:var(--paper);transition:transform .15s ease,background .15s ease;cursor:pointer}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;margin-left:auto;padding:6px}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0}
+
+  .hero{padding:78px 0 42px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.4vw,64px);letter-spacing:-.015em;margin:18px 0 0}
+  .hero h1 .b{color:var(--orange)}
+  .hero .lede{font-size:18.5px;color:var(--muted);margin:22px 0 0;max-width:46ch}
+  .hero .lede b{color:var(--ink);font-weight:600}
+  .hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .chips{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+  .chip{font-family:var(--display);font-weight:600;font-size:13.5px;padding:8px 14px;border-radius:999px;
+    background:var(--gold-soft);border:1px solid var(--gold);color:var(--ink)}
+  .chip.alt{background:#fff;border-color:var(--navy);color:var(--navy)}
+  .miniviz{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;
+    box-shadow:0 18px 40px -28px rgba(8,24,40,.4)}
+  .miniviz .row{display:flex;align-items:center;gap:10px;border-radius:11px;padding:13px 15px;margin-bottom:12px}
+  .miniviz .row.top{background:var(--navy);color:#fff}
+  .miniviz .row.bot{background:var(--orange);color:#fff}
+  .miniviz .tag{font-family:var(--display);font-weight:700;font-size:14px}
+  .miniviz .pill{margin-left:auto;font-size:11.5px;font-weight:700;font-family:var(--display);
+    padding:5px 10px;border-radius:999px;background:#fff;color:var(--navy)}
+  .miniviz .row.bot .pill{background:var(--ink);color:var(--gold)}
+  .miniviz .lbl{text-align:center;font-family:var(--display);font-size:11px;letter-spacing:.18em;
+    color:var(--orange);font-weight:700;margin:2px 0 12px}
+  .miniviz .foot{font-size:13px;color:var(--muted);text-align:center;margin:6px 0 0}
+
+  /* logo strip */
+  .proofstrip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper2)}
+  .proofstrip .wrap{padding-top:20px;padding-bottom:20px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center}
+  .proofstrip .lab{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted)}
+  .wm{font-family:var(--display);font-weight:700;font-size:15px;color:#6a5c48;opacity:.85;white-space:nowrap}
+
+  section{padding:70px 0}
+  .sec-head{max-width:62ch}
+  .sec-head h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.01em;margin-top:10px}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:18px}
+
+  /* belief band */
+  .belief{background:var(--ink);color:var(--paper);text-align:center}
+  .belief h2{font-size:clamp(28px,4vw,46px);letter-spacing:-.01em;color:#fff}
+  .belief h2 .g{color:var(--gold)}
+  .belief p{color:#c3cdda;font-size:18px;max-width:60ch;margin:18px auto 0}
+
+  /* offerings */
+  .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+  .offer{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;position:relative;overflow:hidden}
+  .offer .kicker{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--orange)}
+  .offer h3{font-size:24px;margin:8px 0 12px}
+  .offer p{color:var(--muted);margin:0 0 16px}
+  .offer .bar{height:5px;border-radius:6px 6px 0 0;position:absolute;top:0;left:0;right:0}
+  .offer.product .bar{background:var(--gold)}
+  .offer.gtm .bar{background:var(--navy)}
+  .offer ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+  .offer li{font-size:14px;line-height:1.4;padding-left:22px;position:relative;color:var(--ink)}
+  .offer li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:3px;background:var(--gold)}
+  .offer.gtm li::before{background:var(--navy)}
+  .offer li b{font-weight:600}
+
+  /* interactive selector */
+  .selector{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pickers{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px}
+  .picker{flex:1 1 320px}
+  .picker .q{font-family:var(--display);font-weight:700;font-size:14px;margin-bottom:12px;color:var(--ink)}
+  .seg{display:flex;gap:10px;flex-wrap:wrap}
+  .seg button{font-family:var(--display);font-weight:600;font-size:15px;cursor:pointer;
+    background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:14px 18px;color:var(--ink);
+    display:flex;align-items:center;gap:9px;transition:all .15s ease;flex:1 1 auto;justify-content:center}
+  .seg button .em{font-size:19px}
+  .seg button:hover{border-color:var(--muted)}
+  .seg button[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper);box-shadow:0 8px 20px -12px rgba(8,24,40,.6)}
+  .seg button.gtm[aria-pressed="true"]{background:var(--navy);border-color:var(--navy)}
+  .result{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:30px;position:relative;overflow:hidden}
+  .result .accent{position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold)}
+  .result.isgtm .accent{background:var(--navy)}
+  .result .side .tag{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:8px}
+  .result .side .tag .em{font-size:17px}
+  .result .painbox .quote{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.25;
+    letter-spacing:-.01em;margin-top:12px;color:var(--ink)}
+  .result .painbox .quote::before{content:"\201C";color:var(--orange)}
+  .result .painbox .quote::after{content:"\201D";color:var(--orange)}
+  .result .offerbox{border-left:1px solid var(--line);padding-left:30px}
+  .result .offerbox h3{font-size:21px;margin:10px 0 10px;letter-spacing:-.005em}
+  .result .offerbox p{font-size:14.5px;color:var(--muted);margin:0 0 16px}
+  .result .offerbox .go{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);text-decoration:none;
+    border-bottom:2px solid var(--gold);padding-bottom:2px}
+  .selhint{font-size:13.5px;color:var(--muted);margin-top:16px;text-align:center}
+
+  /* spiky POV */
+  .povs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+  .pov{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;border-top:4px solid var(--orange)}
+  .pov .n{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+  .pov h3{font-size:20px;margin:10px 0 10px;letter-spacing:-.01em}
+  .pov p{font-size:14px;color:var(--muted);margin:0}
+  .pov p b{color:var(--ink);font-weight:600}
+
+  /* wedge / lead magnet */
+  .wedge{background:var(--gold);border-radius:22px;padding:46px;display:grid;
+    grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}
+  .wedge h2{font-size:clamp(26px,3.4vw,38px);color:var(--ink)}
+  .wedge p{color:#5a4423;margin:16px 0 0}
+  .wedge .proof{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);margin-top:14px}
+  .wedge-card{background:var(--ink);color:var(--paper);border-radius:16px;padding:26px;text-align:center}
+  .wedge-card .big{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.2}
+  .wedge-card .price{font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold);margin:12px 0 4px}
+  .wedge-card p{color:#c4cdd8;font-size:13.5px;margin:8px 0 18px}
+
+  /* proof */
+  .group-label{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--orange);margin:34px 0 16px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .case{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+  .case .nm{font-family:var(--display);font-weight:700;font-size:18px}
+  .case .meta{font-size:13px;color:var(--muted);margin:4px 0 16px}
+  .case .stat{font-family:var(--display);font-weight:700;font-size:30px;color:var(--navy);line-height:1}
+  .case .statlabel{font-size:13px;color:var(--muted);margin-top:6px}
+
+  /* logos section */
+  .logos{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .logoband{margin-top:26px}
+  .logoband .lab{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+  .logorow{display:flex;flex-wrap:wrap;gap:12px}
+  .lchip{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);background:#fff;
+    border:1px solid var(--line);border-radius:10px;padding:10px 16px;white-space:nowrap;
+    display:inline-flex;align-items:center;justify-content:center;min-height:46px;min-width:66px}
+  .lchip img{height:26px;max-width:134px;width:auto;object-fit:contain;display:block}
+  .lchip.noimg::after{content:attr(data-name)}
+  /* dark chips for white/reversed logos so they stay visible on the light strip */
+  .lchip.dark{background:var(--ink);border-color:var(--ink)}
+
+  /* substack strip */
+  .substack{background:var(--gold-soft);border-bottom:1px solid var(--line)}
+  .substack .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;
+    padding-top:40px;padding-bottom:40px}
+  .substack .eyebrow{color:var(--orange)}
+  .substack h2{font-size:clamp(24px,3vw,34px);letter-spacing:-.01em;margin-top:10px}
+  .substack p{color:var(--muted);margin:14px 0 0;max-width:48ch}
+  .substack .ss-cta{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+  .substack-embed{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;
+    box-shadow:0 18px 40px -30px rgba(8,24,40,.4);justify-self:end;width:100%;max-width:480px}
+  .substack-embed iframe{display:block;width:100%;border:0;border-radius:10px}
+
+  /* team */
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+  .person{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+  .person.lead{border-color:var(--gold);box-shadow:0 14px 34px -26px rgba(8,24,40,.5)}
+  .person .av{width:46px;height:46px;border-radius:11px;background:var(--peach);color:var(--ink);
+    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:17px;margin-bottom:14px}
+  .person h4{font-family:var(--display);font-size:17px;margin:0}
+  .person .role{font-size:13px;color:var(--orange);font-weight:600;margin:2px 0 10px}
+  .person p{font-size:13.5px;color:var(--muted);margin:0}
+
+  /* testimonials */
+  .quotes{background:var(--navy);color:#eaf0f7}
+  .quotes h2{color:#fff}
+  .quotes .sec-head p{color:#b9c6d6}
+  .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+  .quote{background:#24456c;border:1px solid #335279;border-radius:18px;padding:28px}
+  .quote p{font-size:15.5px;line-height:1.55;color:#e7eef6}
+  .quote .who{font-family:var(--display);font-weight:700;font-size:14px;color:var(--gold);margin-top:14px}
+
+  /* final */
+  .final{text-align:center;padding:92px 0}
+  .final h2{font-size:clamp(30px,4.4vw,52px);letter-spacing:-.01em}
+  .final p{color:var(--muted);font-size:19px;margin:18px auto 30px;max-width:48ch}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;font-size:14px;color:var(--muted)}
+  .foot-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  .foot-row a{text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ===== ported grid components (debt + offer grids) ===== */
+  .canvas{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:20px;
+    overflow:hidden;box-shadow:0 1px 0 #fff inset,0 18px 40px -28px rgba(8,24,40,.4);margin-top:34px}
+  .cv-pad{padding:34px 38px 34px}
+  .hook-eyebrow{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--orange);margin:0 0 11px}
+  .canvas h2{font-size:clamp(24px,3.3vw,34px);letter-spacing:-.02em;line-height:1.06}
+  .canvas h2 .db{color:var(--orange)}
+  .grid{display:grid;grid-template-columns:120px 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:0;
+    margin-top:22px;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+  .colh{padding:15px 18px;text-align:center;font-family:var(--display);font-weight:700;font-size:15px;color:#fff}
+  .colh.before{background:var(--orange)} .colh.after{background:var(--navy)}
+  .colh small{display:block;font-weight:500;font-size:11px;letter-spacing:.04em;opacity:.9;margin-top:3px}
+  .colh .emo{font-size:16px;margin-right:6px}
+  .corner{background:var(--ink)}
+  .rowh{background:var(--ink);color:var(--paper);display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;gap:9px;padding:12px 8px}
+  .rowh .rl{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.12}
+  .rowh .rp{font-family:var(--display);font-weight:600;font-size:9.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--gold);line-height:1.3}
+  .cell{padding:20px 20px 18px;border-left:1px solid var(--line);border-top:1px solid var(--line);
+    background:#fff;display:flex;flex-direction:column}
+  .cell .ic{width:34px;height:34px;margin-bottom:12px}
+  .cell.before .ic{color:var(--orange)} .cell.after .ic{color:var(--navy)}
+  .cell .ic svg{width:100%;height:100%;display:block}
+  .cell .pain{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+  .cell .bill{margin-top:13px;font-size:12.5px;font-weight:600;color:var(--orange);
+    border-left:3px solid var(--gold);padding:2px 0 2px 10px;line-height:1.35}
+  .cell .move{margin-top:auto;padding-top:13px;font-size:12.5px;line-height:1.35;color:var(--muted)}
+  .cell .move .ar{font-family:var(--display);font-weight:700;margin-right:5px}
+  .cell.before .move .ar{color:var(--orange)} .cell.after .move .ar{color:var(--navy)}
+  .cell .ocell{font-family:var(--display);font-weight:700;font-size:17px;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+  .cell .detail{margin-top:11px;font-size:12.5px;line-height:1.42;color:var(--muted)}
+  .cell .detail b{color:var(--ink);font-weight:600}
+  .debtline{position:absolute;top:0;bottom:0;left:calc(120px + (100% - 120px)/2);width:0;
+    border-left:2.5px dashed var(--gold);z-index:3;pointer-events:none}
+  .debtline span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);
+    background:var(--gold);color:var(--ink);font-family:var(--display);font-weight:700;font-size:10px;
+    letter-spacing:.14em;padding:4px 11px;border-radius:999px;white-space:nowrap}
+  .cv-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;
+    border-top:1px solid var(--line);padding:15px 38px;background:var(--paper);flex-wrap:wrap}
+  .brandmark{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:13px}
+  .brandmark .logo{width:26px;height:26px;border-radius:6px;font-size:10px}
+  .cv-foot .fn{font-size:12.5px;color:var(--muted)}
+  .connector{display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 0}
+  .connector .line{width:2px;height:22px;background:repeating-linear-gradient(var(--gold),var(--gold) 5px,transparent 5px,transparent 10px)}
+  .connector .lbl{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);background:var(--gold-soft);border:1px solid var(--gold);
+    border-radius:999px;padding:6px 14px}
+  .askrow{display:flex;justify-content:flex-end;margin-top:14px}
+  .ask{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink);background:var(--gold);
+    border:1px solid #eabf6f;border-radius:999px;padding:10px 18px;text-decoration:none;display:inline-block;transition:transform .15s ease}
+  .ask:hover{transform:translateY(-1px)}
+  .grid.animate .cell{opacity:0;transform:translateY(14px)}
+  .reveal.in .grid.animate .cell{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+  .reveal.in .grid.animate .cell:nth-child(5){transition-delay:.05s}
+  .reveal.in .grid.animate .cell:nth-child(6){transition-delay:.13s}
+  .reveal.in .grid.animate .cell:nth-child(8){transition-delay:.21s}
+  .reveal.in .grid.animate .cell:nth-child(9){transition-delay:.29s}
+  @media(max-width:820px){
+    .grid{grid-template-columns:86px 1fr 1fr}
+    .debtline{left:calc(86px + (100% - 86px)/2)}
+    .cell{padding:15px}
+    .cell .pain{font-size:15.5px}
+    .cv-pad{padding:22px 16px}
+    .cv-foot{padding:13px 16px}
+    .colh{font-size:12px;padding:11px 6px}
+    .rowh .rl{font-size:13px}
+    .brandmark{font-size:11px}
+  }
+
+
+  @media(max-width:920px){
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;
+      background:var(--paper);padding:18px 28px;border-bottom:1px solid var(--line);gap:16px}
+    .menu-toggle{display:block}
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .offer-grid,.qgrid,.wedge,.hero-cta{grid-template-columns:1fr}
+    .substack .wrap{grid-template-columns:1fr}
+    .substack-embed{justify-self:stretch;max-width:none}
+    .cards,.povs{grid-template-columns:1fr}
+    .team-grid{grid-template-columns:1fr 1fr}
+    .result{grid-template-columns:1fr}
+    .result .offerbox{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:22px}
+    .wedge{padding:32px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .grid.animate .cell{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar" role="banner">
-    <div class="container navbar__inner">
-      <a href="/" class="logo-lxd">
-        <img src="assets/logo-lxd.svg" alt="" width="48" height="20" />
-        <span class="wordmark">Learning By Design</span>
-      </a>
-      <nav class="nav" aria-label="Main">
-        <ul class="nav__list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#why">About</a></li>
-          <li><a href="#resources">Resources</a></li>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="logo">LXD</span> Learning By Design AI</a>
+    <nav class="nav-links" id="nav">
+      <a href="#find">Who we help</a>
+      <a href="#offerings">Offerings</a>
+      <a href="#work">Proof</a>
+      <a href="#team">Team</a>
+      <a href="/blog.html">Writing</a>
+      <a class="btn gold" href="https://cal.com/davidfu/30min">Book a call</a>
+    </nav>
+    <button class="menu-toggle" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Build AI By Design · Learning By Design AI</div>
+      <h1>AI-native by design.<br><span class="b">Or AI debt by default.</span></h1>
+      <p class="lede">We're an AI enablement team for B2B and edtech companies. We come alongside you to build the right things, the right way, your AI-native <b>product</b> or your <b>GTM</b> engine, then hand your team the keys. We don't just advise, and we don't stop at a strategy or insights. We upskill your team, build and ship skills, automations and agents with you.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="https://cal.com/davidfu/30min">Book a call with David &amp; Vedansh</a>
+        <a class="btn ghost" href="#work">See the work</a>
+      </div>
+      <div class="chips">
+<!--          <span class="chip">Product By Design AI</span> -->
+<!--          <span class="chip alt">GTM By Design AI</span> -->
+      </div>
+    </div>
+    <div class="miniviz" aria-hidden="true">
+      <div class="row top"><span class="tag">Built AI-native</span><span class="pill">NO DEBT</span></div>
+      <div class="lbl">— the AI debt line —</div>
+      <div class="row bot"><span class="tag">Built before AI</span><span class="pill">tech · process · systems</span></div>
+      <p class="foot">We build the first. We clear the second.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= SUBSTACK ======= -->
+<section class="substack" id="substack">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">On our Substack</div>
+      <h2>AI By Design — notes from the build.</h2>
+      <p>Field notes on building AI-native product and GTM: what actually works, what breaks in the last 20%, and the moves we make with clients. New posts land on our Substack.</p>
+      <div class="ss-cta">
+        <a class="btn gold" href="/blog.html">Read all posts &rarr;</a>
+        <a class="btn ghost" href="https://learningbydesign.substack.com" target="_blank" rel="noopener">Open on Substack</a>
+      </div>
+    </div>
+    <div class="substack-embed reveal">
+      <iframe src="https://learningbydesign.substack.com/embed" width="480" height="320" scrolling="no" title="Subscribe to Learning By Design AI on Substack" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!--  <div class="proofstrip">
+  <div class="wrap">
+    <span class="lab">Worked with</span>
+    <span class="wm">100 School</span>
+    <span class="wm">Cloudforce</span>
+    <span class="wm">Willow</span>
+    <span class="wm">African Leadership Group</span>
+    <span class="wm">Reforge</span>
+    <span class="wm">General Assembly</span>
+    <span class="wm">Penn GSE</span>
+    <span class="wm">JFF</span>
+  </div>
+</div> -->
+
+<!-- ======= LOGOS ======= -->
+<section class="logos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Track record</div>
+      <h2>The company we keep.</h2>
+    </div>
+    <div class="logoband reveal">
+      <div class="lab">Clients we've worked with</div>
+      <div class="logorow">
+        <span class="lchip" data-name="General Assembly"><img src="assets/logos/general-assembly.png" alt="General Assembly" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Springboard"><img src="assets/logos/springboard.png" alt="Springboard" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Cloudforce"><img src="assets/logos/cloudforce.png" alt="Cloudforce" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="100 School"><img src="assets/logos/100-school.png" alt="100 School" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Reforge"><img src="assets/logos/reforge.png" alt="Reforge" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip dark" data-name="African Leadership Group"><img src="assets/logos/alx.png" alt="African Leadership Group" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Willow"><img src="assets/logos/willow.png" alt="Willow" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Quizizz"><img src="assets/logos/quizizz.svg" alt="Quizizz" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Penn GSE"><img src="assets/logos/penn-gse.png" alt="Penn GSE" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Shine Early Learning"><img src="assets/logos/shine.png" alt="Shine Early Learning" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Promise Venture Studio"><img src="assets/logos/promise-venture-studio.png" alt="Promise Venture Studio" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Diffusion Venture Studio"><img src="assets/logos/diffusion.png" alt="Diffusion Venture Studio" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Mindset Copilot"><img src="assets/logos/mindset-copilot.png" alt="Mindset Copilot" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+      </div>
+    </div>
+    <div class="logoband reveal">
+      <div class="lab">We've upskilled leaders in product &amp; AI from</div>
+      <div class="logorow">
+        <span class="lchip" data-name="Google"><img src="assets/logos/google.svg" alt="Google" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Handshake"><img src="assets/logos/handshake.svg" alt="Handshake" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="JPMorgan"><img src="assets/logos/jpmorgan.svg" alt="JPMorgan" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="BCG"><img src="assets/logos/bcg.webp" alt="BCG" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Vanta"><img src="assets/logos/vanta.png" alt="Vanta" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Ocado Retail"><img src="assets/logos/ocado.png" alt="Ocado Retail" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="HiBob"><img src="assets/logos/hibob.png" alt="HiBob" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Disney"><img src="assets/logos/disney.svg" alt="Disney" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+      </div>
+    </div>
+    <div class="logoband reveal">
+      <div class="lab">Our clients are backed by</div>
+      <div class="logorow">
+        <span class="lchip" data-name="a16z"><img src="assets/logos/a16z.png" alt="a16z" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Tiger Global"><img src="assets/logos/tiger-global.png" alt="Tiger Global" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip dark" data-name="Y Combinator"><img src="assets/logos/y-combinator.svg" alt="Y Combinator" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Techstars"><img src="assets/logos/techstars.svg" alt="Techstars" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="On Deck"><img src="assets/logos/on-deck.svg" alt="On Deck" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Owl Ventures"><img src="assets/logos/owl-ventures.webp" alt="Owl Ventures" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Reach Capital"><img src="assets/logos/reach-capital.png" alt="Reach Capital" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Microsoft"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Gates Foundation"><img src="assets/logos/gates-foundation.png" alt="Gates Foundation" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Walton"><img src="assets/logos/walton.svg" alt="Walton" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="MSDF"><img src="assets/logos/msdf.svg" alt="MSDF" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======= CHOOSE YOUR OWN ADVENTURE ======= -->
+<section id="find" class="selector">
+  <div class="wrap">
+
+    <div class="canvas reveal">
+      <div class="cv-pad">
+        <div class="hook-eyebrow">Where every edtech and B2B company sits right now</div>
+        <h2>AI-native by design. <span class="db">Or AI debt by default.</span></h2>
+        <div class="grid animate">
+          <div class="corner"></div>
+          <div class="colh before">Before Claude Code<small>built the old way</small></div>
+          <div class="colh after">After Claude Code<small>native from day one</small></div>
+          <div class="rowh"><span class="rl">Product<br>&amp; Tech</span><span class="rp">Product<br>By Design</span></div>
+          <div class="cell before">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="4" x2="25" y2="4"/><line x1="7" y1="28" x2="25" y2="28"/><path d="M9 4 L9 8 L16 16 L23 8 L23 4"/><path d="M9 28 L9 24 L16 16 L23 24 L23 28"/></svg></div>
+            <div class="pain">Months to ship what rivals do in days.</div>
+            <div class="bill">The cost: you fall further behind every sprint.</div>
+            <div class="move"><span class="ar">&rarr;</span>Build muscle and systems to ship at AI-speed.</div>
+          </div>
+          <div class="cell after">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 L29 27 L3 27 Z"/><line x1="16" y1="13" x2="16" y2="20"/><line x1="16" y1="23.5" x2="16" y2="23.6"/></svg></div>
+            <div class="pain">Shipping more code doesn&rsquo;t equal better products.</div>
+            <div class="bill">The cost: spaghetti or vibe-coded apps that break.</div>
+            <div class="move"><span class="ar">&rarr;</span>Agentic build loops, from day one.</div>
+          </div>
+          <div class="rowh"><span class="rl">GTM</span><span class="rp">Marketing<br>&amp; Sales</span></div>
+          <div class="cell before">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="28" x2="29" y2="28"/><line x1="7" y1="28" x2="7" y2="22"/><line x1="14" y1="28" x2="14" y2="9"/><line x1="21" y1="28" x2="21" y2="24"/><line x1="27" y1="28" x2="27" y2="16"/></svg></div>
+            <div class="pain">No capacity or systems to test channels and double down.</div>
+            <div class="bill">The cost: scaling cold email or a channel too early.</div>
+            <div class="move"><span class="ar">&rarr;</span>Find the strategy and channels, then the agents and systems to win.</div>
+          </div>
+          <div class="cell after">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="22" height="12" rx="2.5"/><line x1="28.5" y1="15" x2="28.5" y2="19"/><rect x="6" y="14" width="3.5" height="6" rx="1" fill="currentColor" stroke="none"/></svg></div>
+            <div class="pain">One maxed-out person managing people and agent output.</div>
+            <div class="bill">The cost: growth capped at headcount.</div>
+            <div class="move"><span class="ar">&rarr;</span>An owned engine. Clay to Claude to meetings booked with your ICP.</div>
+          </div>
+          <div class="debtline"><span>the AI debt line</span></div>
+        </div>
+      </div>
+      <div class="cv-foot">
+        <span class="brandmark"><span class="logo">AI</span>AI By Design · Learning By Design AI</span>
+        <span class="fn">Product By Design AI &nbsp;·&nbsp; GTM By Design AI</span>
+      </div>
+    </div>
+
+    <div class="connector reveal"><div class="line"></div><span class="lbl">Found your square? Here&rsquo;s the build</span><div class="line"></div></div>
+
+    <div class="canvas reveal">
+      <div class="cv-pad">
+        <div class="hook-eyebrow">Whichever square you&rsquo;re in</div>
+        <h2>We build it with you. <span class="db">Then your team runs it.</span></h2>
+        <div class="grid animate">
+          <div class="corner"></div>
+          <div class="colh before"><span class="emo">&#127795;</span>Legacy edtech<small>built more than 2 years ago</small></div>
+          <div class="colh after"><span class="emo">&#127793;</span>New builds<small>started in the last 2 years</small></div>
+          <div class="rowh"><span class="rl">Product<br>&amp; Tech</span><span class="rp">Product<br>By Design</span></div>
+          <div class="cell before">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="9"/><line x1="20.5" y1="20.5" x2="28" y2="28"/><path d="M10 14 h8 M14 10 v8" stroke-width="1.6"/></svg></div>
+            <div class="ocell">Validate strategy, stack, and speed.</div>
+            <div class="detail">We map <b>what to refactor vs rebuild</b> for high-speed, AI-enabled shipping, then help you ship it.</div>
+          </div>
+          <div class="cell after">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 L27 10 L27 22 L16 28 L5 22 L5 10 Z"/><path d="M5 10 L16 16 L27 10 M16 16 L16 28"/></svg></div>
+            <div class="ocell">Stand up an AI-native product practice.</div>
+            <div class="detail"><b>Claude Code, agentic loops, eval-driven.</b> Native from day one, with no debt to rip out later.</div>
+          </div>
+          <div class="rowh"><span class="rl">GTM</span><span class="rp">Marketing<br>&amp; Sales</span></div>
+          <div class="cell before">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="12" r="4"/><circle cx="21" cy="12" r="4"/><path d="M4 27 C4 21 8 18.5 11 18.5 C14 18.5 18 21 18 27 M15 27 C15 21.5 19 18.5 21 18.5 C24 18.5 28 21 28 27"/></svg></div>
+            <div class="ocell">Upskill GTM into shared workflows and agents.</div>
+            <div class="detail">A <b>skills library and a champion who owns it</b>, so the whole team levels up, not one rep.</div>
+          </div>
+          <div class="cell after">
+            <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="24" height="6" rx="1.6"/><rect x="4" y="13" width="24" height="6" rx="1.6"/><rect x="4" y="21" width="24" height="6" rx="1.6"/><circle cx="8" cy="8" r="0.9" fill="currentColor"/><circle cx="8" cy="16" r="0.9" fill="currentColor"/><circle cx="8" cy="24" r="0.9" fill="currentColor"/></svg></div>
+            <div class="ocell">Build GTM foundations on an owned stack.</div>
+            <div class="detail">Off Webflow. <b>Custom build, deploy on Vercel or Netlify.</b> The migration is the on-ramp.</div>
+          </div>
+          <div class="debtline"></div>
+        </div>
+        <div class="askrow"><a class="ask" href="https://cal.com/davidfu/30min">Let&rsquo;s find your first build &rarr;</a></div>
+      </div>
+      <div class="cv-foot">
+        <span class="brandmark"><span class="logo">AI</span>AI By Design · Learning By Design AI</span>
+        <span class="fn">Product By Design AI &nbsp;·&nbsp; GTM By Design AI</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= HUMAN-FIRST BELIEF ======= -->
+<section class="belief">
+  <div class="wrap reveal">
+    <h2>To become AI-first, you have to be <span class="g">human-first.</span></h2>
+    <p>We start with the people: understand and empower your team, understand and empower your customers, and the stakeholders around them. The tools only compound once the humans do.</p>
+  </div>
+</section>
+
+<!-- ======= OFFERINGS ======= -->
+<section id="offerings">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Two offerings, two pillars</div>
+      <h2>Build the right things. The right way. With your team.</h2>
+      <p>Whether you're clearing debt or building greenfield, the work runs on two pillars: your product and your go-to-market. We build both, then leave your team able to run them.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer product reveal"><span class="bar"></span>
+        <div class="kicker">Product By Design AI</div>
+        <h3>AI-native products, built to ship fast.</h3>
+        <p>A fractional product and engineering practice that lives on your team, from architecture to shipped features, with Vedansh leading the build.</p>
+        <ul>
+          <li>Architecture on AWS that runs a full product for <b>$20 to $50 a month</b> and holds as you scale</li>
+          <li><b>Migrations with no downtime</b>, infra cost down $100 to $1,000+ a month</li>
+          <li>Full CI/CD with zero management, so the team ships instead of babysitting deploys</li>
+          <li>AI-native builds, including voice and multi-agent systems, <b>not features bolted onto an old stack</b></li>
+          <li>One experienced CTO doing the work of a senior team, no headcount added</li>
         </ul>
-      </nav>
-      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      </div>
+      <div class="offer gtm reveal"><span class="bar"></span>
+        <div class="kicker">GTM By Design AI</div>
+        <h3>AI-native pipeline, and the systems under it.</h3>
+        <p>Strategy, systems, and skills for sales and marketing, so a lean team performs like a much bigger one, and attention turns into pipeline turns into revenue.</p>
+        <ul>
+          <li>A custom site and owned stack, off no-code, deployed on <b>Vercel or Netlify</b></li>
+          <li>CRM implemented and configured right, with the data plumbing to back it</li>
+          <li>A notetaker wired in via <b>MCP</b>, so every sales and validation call flows into dashboards</li>
+          <li>Dashboards that refresh on a schedule for objections, insights, and competitor mentions</li>
+          <li>Shared workflows, agents, and a champion who owns the skills library</li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <h1 class="hero__headline">Build AI-native GTM systems and products that close deals.</h1>
-        <p class="hero__subheader">
-          We help education and B2B teams turn fuzzy ideas and messy pipelines into focused offers, clean CRM habits, and repeatable revenue—combining AI, GTM, and product leadership from experience across startups, scale-ups, and non-profits.
-        </p>
-        <div class="hero__accent-line" aria-hidden="true"></div>
-        <div class="hero__ctas">
-          <a href="https://bit.ly/lxd_working_session" class="btn btn--primary" target="_blank" rel="noopener">Book a working session</a>
-          <a href="https://bit.ly/david_lxd_mini_cases_1" class="btn btn--secondary" target="_blank" rel="noopener">See client results</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Persona strip: canvas for animated stripe gradient -->
-    <section class="persona-strip" aria-label="Who are you?">
-      <canvas class="persona-strip__canvas" id="persona-strip-canvas" aria-hidden="true"></canvas>
-      <div class="persona-strip__content">
-        <div class="container">
-          <h2 class="persona-strip__title">Who are you?</h2>
-          <div class="persona-cards">
-          <div class="persona-card">
-            <h3 class="persona-card__label">I lead a team in a larger org</h3>
-            <p class="persona-card__copy">I need strategic validation and justification for a product or innovation initiative—and extra capacity from someone who can both think and execute.</p>
-            <a href="#who-i-work-with" class="btn btn--panel is-hidden" aria-hidden="true">For leaders in larger orgs →</a>
-          </div>
-          <div class="persona-card">
-            <h3 class="persona-card__label">I'm a founder with early product-market fit</h3>
-            <p class="persona-card__copy">We're seeing traction, but our product and GTM are still ad hoc. I need help systematizing sales, revenue ops, and product so we can scale.</p>
-            <a href="#who-i-work-with" class="btn btn--panel is-hidden" aria-hidden="true">For founders & early teams →</a>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social Proof -->
-    <section class="social-proof section">
-      <div class="container social-proof__inner">
-        <p class="eyebrow social-proof__eyebrow">Trusted by teams backed by leading VCs and philanthropies</p>
-        <div class="logo-row">
-          <img class="logo-item" src="assets/100 School logo with words Frame 2147225514.png" alt="100 School" />
-          <img class="logo-item" src="assets/JFF_Primary Logo.png" alt="JFFLabs" />
-          <img class="logo-item" src="assets/PennGSE_UPenn_Logo_PNG.png" alt="Penn GSE" />
-          <img class="logo-item" src="assets/African_Leadership_Group (text white).png" alt="African Leadership Group" />
-          <img class="logo-item" src="assets/Shine Early Learning logo.PNG" alt="Shine Early Learning / Acelero" />
-          <img class="logo-item" src="assets/DiffusionVenture_Logo_RGB.png" alt="Diffusion Venture Studio" />
-          <img class="logo-item" src="assets/XtraMath_logo.svg" alt="XtraMath" />
-          <img class="logo-item" src="assets/Reforge-Fullmark-Black.png" alt="Reforge" />
-          <img class="logo-item" src="assets/streetlight_schools_png.png" alt="Streetlight Schools" />
-        </div>
-        <p class="eyebrow social-proof__eyebrow">Orgs have been funded by</p>
-        <div class="logo-row">
-          <img class="logo-item" src="assets/y-combinator-white.svg" alt="Y Combinator" />
-          <img class="logo-item" src="assets/techstars-logo-vector-1.svg" alt="Techstars" />
-          <img class="logo-item" src="assets/a16z_logo_png.png" alt="a16z" />
-          <img class="logo-item" src="assets/Gates_Foundation_GF_PRIMARY_WEATHERED_SLATE_LOGO.png" alt="Gates Foundation" />
-          <img class="logo-item" src="assets/Walton_Family_Foundation_logo.svg" alt="Walton Family Foundation" />
-          <img class="logo-item" src="assets/logo-msdf-color-svg.svg" alt="MSDF" />
-        </div>
-        <!-- Punchy results (2x2) -->
-        <div class="punchy-results">
-          <div class="who-columns punchy-results__grid">
-            <div class="who-column panel-angled punchy-result">
-              <p class="punchy-result__icon" aria-hidden="true">💵</p>
-              <p>$1 million+ in pipeline, six figures ($100ks) in closed revenue in a short period of time (for multiple clients)</p>
-            </div>
-            <div class="who-column panel-angled punchy-result">
-              <p class="punchy-result__icon" aria-hidden="true">🤖</p>
-              <p>AI-powered product roadmaps to productize your expertise areas and leverage AI in building and the platform (for multiple clients)</p>
-            </div>
-            <div class="who-column panel-angled punchy-result">
-              <p class="punchy-result__icon" aria-hidden="true">💼</p>
-              <p>AI-powered process & people for translation, QA and AI-voice over of a huge volume of learning content and $850k state-wide workforce dev grant for a simulation, workforce learning platform</p>
-            </div>
-            <div class="who-column panel-angled punchy-result">
-              <p class="punchy-result__icon" aria-hidden="true">🫱🏼‍🫲🏾</p>
-              <p>Enterprise learning startup: honed positioning, GTM, value prop and the right fit for their replacement CEO</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Who I Work With (hidden) -->
-    <section id="who-i-work-with" class="section who-section is-hidden" aria-hidden="true">
-      <div class="container">
-        <h2 class="section__headline">Two kinds of leaders. One core need: make the work work.</h2>
-        <div class="who-columns">
-          <div class="who-column panel-angled">
-            <h3>Leaders in larger orgs</h3>
-            <p>You're responsible for a product, initiative, or innovation portfolio. You need:</p>
-            <ul>
-              <li>A defensible strategy you can stand behind with your CEO, board, or funders.</li>
-              <li>Clear recommendations rooted in user research, market insight, and financial reality.</li>
-              <li>Extra capacity from someone who can collaborate with your team, not parachute in with a slide deck.</li>
-            </ul>
-            <p>I've done this with JFFLabs, Shine Early Learning/Acelero, pan-African edtech nonprofits, and university-based programs—turning ambiguity into clear roadmaps your stakeholders can say "yes" to.</p>
-          </div>
-          <div class="who-column panel-angled">
-            <h3>Founders with early PMF</h3>
-            <p>You've proven people will pay. Now the chaos begins:</p>
-            <ul>
-              <li>Leads everywhere, in spreadsheets and DMs.</li>
-              <li>Deals closing, but no consistent system.</li>
-              <li>A product roadmap driven by anecdotes, not patterns.</li>
-            </ul>
-            <p>I partner with you as a fractional GTM + product lead to clean the pipeline, sharpen the offer, and build simple AI-powered systems so you can grow without losing the signal.</p>
-          </div>
-        </div>
-        <p class="section__cta"><a href="#how-it-works" class="btn btn--primary">See how engagements work</a></p>
-      </div>
-    </section>
-
-    <!-- Services / Offers -->
-    <section id="services" class="section services-section">
-      <div class="container">
-        <h2 class="section__headline">Expertise / Service Offerings</h2>
-        <p class="section__intro">Every engagement blends strategy + execution. I don't just advise; I roll up my sleeves with you and your team.</p>
-
-        <article class="offer" id="offer-rev-ops">
-          <div class="offer__header">
-            <h3>B2B Rev Ops × AI (Revenue OS.ai)</h3>
-            <p class="offer__subheader">Systematize your founder-led sales and demand gen.</p>
-          </div>
-          <div class="offer__body">
-            <p>Replace scattered spreadsheets and one-off hacks with a simple, AI-native GTM system:</p>
-            <ul>
-              <li>Clean CRM setup and pipeline stages you'll actually use.</li>
-              <li>Lead sourcing and data enrichment via tools like Clay, Apollo, and Instantly.</li>
-              <li>Outreach sequences, follow-up cadences, and dashboards for demos, proposals, and closed-won.</li>
-              <li>Weekly working sessions and ride-along coaching so the system sticks.</li>
-            </ul>
-            <p>Built for early-stage B2B teams—especially in edtech—who need to turn "we're getting in the door" into a repeatable motion.</p>
-            <a href="revenue-os.html" class="offer__link">Explore Revenue OS.ai →</a>
-          </div>
-        </article>
-
-        <article class="offer" id="offer-product">
-          <div class="offer__header">
-            <h3>Product & Productization × AI</h3>
-            <p class="offer__subheader">Nail the offer. Sell what's buildable, and build what sells.</p>
-          </div>
-          <div class="offer__body">
-            <p>For organizations with strong programs, services, or IP that haven't yet been turned into clear products:</p>
-            <ul>
-              <li>Jobs-to-be-done and user research to clarify who you serve and why they buy.</li>
-              <li>Packaging, pricing, and product definition aligned with your delivery capacity.</li>
-              <li>AI-enabled product roadmaps that sequence bets over 1, 3, and 5 years.</li>
-              <li>Buy/build/partner decisions and funder/board-ready recommendations.</li>
-            </ul>
-            <p>Examples include productization and AI roadmapping for Shine Early Learning/Acelero and a pan-African edtech nonprofit serving ministries of education across multiple countries.</p>
-          </div>
-        </article>
-
-        <article class="offer" id="offer-ai">
-          <div class="offer__header">
-            <h3>AI Upskilling, Automation & Transformation</h3>
-            <p class="offer__subheader">From AI curiosity to everyday practice.</p>
-          </div>
-          <div class="offer__body">
-            <p>For companies that want more than a one-off AI workshop:</p>
-            <ul>
-              <li>AI skills frameworks and assessments tailored to your roles.</li>
-              <li>Cohort-based "30-Day AI Challenge" style programs that build real habits.</li>
-              <li>AI-enabled process redesign for teams (sales, L&D, ops).</li>
-              <li>Pilot design and metrics so you can show real impact, not just hype.</li>
-            </ul>
-            <p>At 100 School and JFF, this has meant going from scattered AI experiments to structured programs, assessment dashboards, and six-figure B2B opportunities.</p>
-          </div>
-        </article>
-
-        <article class="offer" id="offer-edtech">
-          <div class="offer__header">
-            <h3>Edtech GTM & Ecosystem Navigation</h3>
-            <p class="offer__subheader">Go-to-market in education without losing years to the learning curve.</p>
-          </div>
-          <div class="offer__body">
-            <p>If you're building for K-12, higher ed, or workforce:</p>
-            <ul>
-              <li>ICP definition and GTM strategy across districts, CMOs, and workforce boards.</li>
-              <li>Founder-led sales coaching and RFP/bid support.</li>
-              <li>Positioning and narrative that resonates with educators, administrators, and funders.</li>
-              <li>Intros and pattern recognition from a decade across African Leadership Group, Streetlight Schools, edtech startups, and US intermediaries.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="offer" id="offer-program">
-          <div class="offer__header">
-            <h3>Program Design, Facilitation & Coaching</h3>
-            <p class="offer__subheader">Build the programs that build entrepreneurs.</p>
-          </div>
-          <div class="offer__body">
-            <p>For incubators, funders, schools, and fellowship programs:</p>
-            <ul>
-              <li>Curriculum and program design for social entrepreneurship and future-of-learning ventures.</li>
-              <li>Facilitated workshops on problem discovery, JTBD, and validation.</li>
-              <li>1:1 coaching for founders navigating pivots, funding, and personal inflection points.</li>
-            </ul>
-            <p>This is the work I do with Penn GSE's M.S.Ed. in Education Entrepreneurship, Transcend Network, 4.0 Schools, Promise Venture Studio and others.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Why Learning By Design -->
-    <section id="why" class="section why-section">
-      <div class="container">
-        <h2 class="section__headline">Not just a consultant. A cross-functional co-builder, powered by a powerful network.</h2>
-        <div class="why-section__photo">
-          <img src="assets/David_Fu_shoulders_bio_removebg-preview.png" alt="David Fu" class="why-section__photo-img" width="200" height="200" />
-        </div>
-        <div class="why-grid">
-          <div class="why-card">
-            <h3>A network of operators and experts power our work.</h3>
-            <p>We bring the strongest domain experts across industry (education) and functions (tech, sales, GTM, marketing, revops, product) who've experienced and overcome challenges in scaling and leading organizations.</p>
-          </div>
-          <div class="why-card">
-            <h3>Strategy + execution, not either/or.</h3>
-            <p>I don't hand you a deck and disappear. I join pipeline reviews, rewrite outreach, interview users, and help you implement tools, processes and habits until things work.</p>
-          </div>
-          <div class="why-card">
-            <h3>Calm judgment when things are messy.</h3>
-            <p>From xenophobic violence and COVID disruptions to leadership transitions and funding crunches, I've led teams through "war-time" moments while protecting what matters most: people, positioning, process and profit / sustainability.</p>
-          </div>
-          <div class="why-card">
-            <h3>Cross-functional by design.</h3>
-            <p>I move fluently between product, GTM, ops, and finance—connecting dots so your strategy, messaging, and execution aren't fighting each other.</p>
-          </div>
-        </div>
-        <h3 class="people-headline">People we've worked with include</h3>
-        <div class="people-grid">
-          <div class="people-card">
-            <img src="assets/Karn.jpg" alt="Karn" class="people-card__img" width="80" height="80" />
-            <p class="people-card__name">Karn</p>
-            <p class="people-card__desc">Fractional CTO with AI/ML expertise</p>
-          </div>
-          <div class="people-card">
-            <img src="assets/Ntaka.jpeg" alt="Ntaka" class="people-card__img" width="80" height="80" />
-            <p class="people-card__name">Ntaka</p>
-            <p class="people-card__desc">Innovation, strategy, project manager</p>
-          </div>
-          <div class="people-card">
-            <img src="assets/Darin.jpeg" alt="Darin" class="people-card__img" width="80" height="80" />
-            <p class="people-card__name">Darin</p>
-            <p class="people-card__desc">Higher ed × GTM & sales — avoiding the pilot trap</p>
-          </div>
-          <div class="people-card">
-            <img src="assets/Lawrence.jpeg" alt="Lawrence" class="people-card__img" width="80" height="80" />
-            <p class="people-card__name">Lawrence</p>
-            <p class="people-card__desc">Consultant & private equity & public markets investor turned vertical SaaS owner & operator</p>
-          </div>
-        </div>
-        <div class="testimonials">
-          <blockquote class="testimonial">
-            <span class="testimonial__icon" aria-hidden="true">💰</span>
-            Thanks for being real with me and thinking through tradeoffs, optimization, and cofounder equity.
-            <cite>~ from a founder who successfully raised a round</cite>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span class="testimonial__icon" aria-hidden="true">🎒</span>
-            Thanks for all your thoughts. You're extremely knowledgeable about this space.
-            <cite>~ from a founder about edtech</cite>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span class="testimonial__icon" aria-hidden="true">❤️</span>
-            Really glad I talked to you before leaving to deal with a personal family situation; I was able to be there with them in their last moments and support my mom afterwards before returning to build my startup.
-            <cite>~ from a founder navigating life</cite>
-          </blockquote>
-        </div>
-        <p class="section__cta"><a href="https://bit.ly/lxd_working_session" class="btn btn--primary" target="_blank" rel="noopener">Book a 30-minute intro</a></p>
-      </div>
-    </section>
-
-    <!-- Selected Results (hidden) -->
-    <section id="results" class="section results-section results-section--panels is-hidden" aria-hidden="true">
-      <div class="container">
-        <h2 class="section__headline">A few examples of what this looks like in practice</h2>
-        <div class="case-study-grid">
-          <div class="case-study-card panel-angled">
-            <h3>100 School</h3>
-            <p class="result-in-panel__title">From 100-day course to focused 30-day AI challenge + B2B pipeline</p>
-            <ul>
-              <li>Redesigned flagship AI challenge and assessment approach.</li>
-              <li>September relaunch: 7,000 sign-ups (vs 5,000 goal) and 58% open rates.</li>
-              <li>Helped land early five-figure B2B deals and prototype an AI skills dashboard for enterprise clients.</li>
-            </ul>
-          </div>
-          <div class="case-study-card panel-angled">
-            <h3>Shine Early Learning / Acelero</h3>
-            <p class="result-in-panel__title">Clarifying a multi-product roadmapping decision</p>
-            <ul>
-              <li>Assessed readiness and market potential across five product lines (curriculum, family engagement, assessment, coaching, data).</li>
-              <li>Delivered productization pathways, technical architecture recommendations, and prioritization framework.</li>
-              <li>Helped leadership narrow to the highest-leverage product bets backed by evidence.</li>
-            </ul>
-          </div>
-          <div class="case-study-card panel-angled">
-            <h3>Leanlab Education</h3>
-            <p class="result-in-panel__title">$250K new revenue in 90 days & a repeatable BD playbook</p>
-            <ul>
-              <li>Refined value prop and positioning to compete for larger enterprise contracts.</li>
-              <li>Cleaned CRM, codified outreach cadences, and installed weekly pipeline rituals.</li>
-              <li>Closed ~$250K in contracts and transitioned a healthy pipeline to the new sales lead.</li>
-            </ul>
-          </div>
-          <div class="case-study-card panel-angled">
-            <h3>CNA Simulations</h3>
-            <p class="result-in-panel__title">$850K workforce development grant + AI speech pipeline</p>
-            <ul>
-              <li>Helped secure a ~$850K California workforce development grant.</li>
-              <li>Built a process to generate and QA 100,000+ words of multilingual synthetic speech for simulations using LLMs—slashing cost and production time.</li>
-            </ul>
-          </div>
-          <div class="case-study-card panel-angled">
-            <h3>Streetlight Schools</h3>
-            <p class="result-in-panel__title">Keeping an inner-city school alive and thriving for a decade</p>
-            <ul>
-              <li>Grew from pilot to 300+ learners with major gains in math and literacy.</li>
-              <li>Reduced donor dependence from 90% to under 60% via a blended funding model.</li>
-            </ul>
-          </div>
-        </div>
-        <p class="section__cta"><a href="#how-it-works" class="btn btn--primary">See how engagements work</a></p>
-      </div>
-    </section>
-
-    <!-- Deeper testimonials -->
-    <section class="section testimonials-deep">
-      <div class="container">
-        <h2 class="section__headline">What clients say</h2>
-        <div class="testimonials-deep__list">
-          <article class="testimonial-deep">
-            <img src="assets/Max.jpeg" alt="Max" class="testimonial-deep__img" width="80" height="80" />
-            <div class="testimonial-deep__body">
-              <p class="testimonial-deep__name">Max — 100 School</p>
-              <blockquote>
-                <p>David Fu has been a cheat code for 100 School.</p>
-                <p>When we were juggling two hard problems at once — (1) re-building & launching our learning experience so it actually transformed people while keeping our core differentiation intact, and (2) validating the right B2B enterprise AI enablement/upskilling opportunity … David came in and brought both clarity + momentum.</p>
-                <p><strong>On strategy / discovery:</strong> He ran tight discovery across learners + enterprise stakeholders, then translated messy feedback into crisp decisions: what to cut, what to double down on, and what our "atomic challenge" format needed to be. That work directly helped us pivot from the old 100-day and 7 day atomic challenges into a punchy, foundations challenge that's easier to ship, easier to run, and way better for engagement (30 days for B2B; 15 days for B2C).</p>
-                <p><strong>On execution + team:</strong> David didn't just "advise." He showed up like a cofounder — helping me navigate the hard leadership stuff: alignment, prioritization, and the uncomfortable conversations you avoid when you're tired and moving fast. He also brought in Liza, who complemented his strengths and became instrumental as a product/project lead to empower the team and keep the trains running.</p>
-                <p><strong>On revenue impact:</strong> This is the part founders care about 😅 David helped us tighten our enterprise story, improve proposals, and run a real sales process. Result: 7-figure pipeline created and 6-figures in revenue closed, plus 5 pilots (and counting) — including with a global top-tier consulting company.</p>
-              </blockquote>
-            </div>
-          </article>
-          <article class="testimonial-deep">
-            <img src="assets/Jennifer.jpeg" alt="Jennifer" class="testimonial-deep__img" width="80" height="80" />
-            <div class="testimonial-deep__body">
-              <p class="testimonial-deep__name">Jennifer — JFF</p>
-              <blockquote>
-                <p>Wanted to take a moment to thank David Fu, who partnered with us at JFFLabs recently, for his awesome work.</p>
-                <p>David brought crucial energy and momentum to our tiger team when we were looking for specific GTM and productization expertise. He quickly identified valuable insights and worked with us to synthesize them into actionable recommendations, enabling leadership to make key strategic decisions on priorities and operationalization.</p>
-                <p>David delivered a comprehensive market landscape analysis, helping us think about the value chain and the dynamics of an evolving market. He went beyond simple market sizing, uncovering atypical insights to help us push our work further, while always centering our mission of supporting workers and learners in an age of evolving skills and technology.</p>
-                <p>David's work provided clarity on JFF's strategy, while taking into industry trends to help us plan for the future. His strong communication ensured clear timelines, ownership, and high-quality deliverables throughout the project.</p>
-              </blockquote>
-            </div>
-          </article>
-          <article class="testimonial-deep">
-            <img src="assets/Seth.jpeg" alt="Seth" class="testimonial-deep__img" width="80" height="80" />
-            <div class="testimonial-deep__body">
-              <p class="testimonial-deep__name">Seth — African Leadership Group</p>
-              <blockquote>
-                <p>Fu is a one of one - his background in finance and operations keep him well grounded in feasibility and delivering real value, but he elevates above that to define ambitious product vision while aligning and empowering diverse cross-functional teams to bring that vision to life. He navigates between big picture and minute detail seamlessly, and he leads across multiple layers of complexity to create clarity and focus. He was the critical lynchpin behind a massive scale up for a product that had reached product market fit, growing revenue 10x in less than a year.</p>
-                <p>Fu's leadership unlocks a new level within his teams - people perform at a higher level and unlock levels of creative problem solving that they haven't experienced before. He always brings a contagious energy and relentless courage to the work that leads to outsized results.</p>
-              </blockquote>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- How Engagements Work (hidden) -->
-    <section id="how-it-works" class="section how-section is-hidden" aria-hidden="true">
-      <div class="container">
-        <h2 class="section__headline">Simple, flexible engagements—no bloated retainers</h2>
-        <div class="how-steps">
-          <div class="how-step">
-            <span class="how-step__num" aria-hidden="true">1</span>
-            <h3>Diagnostic Sprint (2–3 weeks)</h3>
-            <p>Short, focused audit of your pipeline, product, or program. We clarify goals, constraints, and quick wins.</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num" aria-hidden="true">2</span>
-            <h3>Build & Test (6–12 weeks)</h3>
-            <p>We co-design the GTM system, product strategy, or AI initiative—and test it with real prospects/users.</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step__num" aria-hidden="true">3</span>
-            <h3>Embed & Hand-off</h3>
-            <p>Documentation, SOPs, dashboards, and training so your team can run the playbook without me.</p>
-          </div>
-        </div>
-        <p class="how-formats">Typical formats: Short sprint projects, fractional leadership (1–2 days/week), or targeted advisory + coaching.</p>
-        <p class="section__cta"><a href="#contact" class="btn btn--primary">Share a bit about your context →</a></p>
-      </div>
-    </section>
-
-    <!-- FAQ (hidden) -->
-    <section class="section faq-section is-hidden" aria-hidden="true">
-      <div class="container">
-        <h2 class="section__headline">FAQ</h2>
-        <dl class="faq-list">
-          <div class="faq-item">
-            <dt>Do you only work in edtech?</dt>
-            <dd>No. Education and workforce are my deepest lanes, but the AI-enabled GTM and rev-ops work translates well to B2B SaaS and services more broadly. We'll sanity-check fit on an intro call.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>Do you work with my internal team or instead of them?</dt>
-            <dd>With them. My goal is to leave you with stronger people, not dependence on a consultant.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>What are typical budgets?</dt>
-            <dd>Most projects fall between $10K–$50K depending on scope and duration; fractional roles are scoped monthly. We'll right-size based on impact and your stage.</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- Resources -->
-    <section id="resources" class="section">
-      <div class="container">
-        <h2 class="section__headline">Resources</h2>
-        <p class="section__intro"><a href="https://learningbydesign.substack.com" target="_blank" rel="noopener">0 → 1 GTM</a> — on Substack.</p>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section id="contact" class="section cta-section">
-      <div class="container cta-section__inner">
-        <h2 class="cta-section__headline">Ready to turn ideas and potential into systems and results?</h2>
-        <p class="cta-section__sub">Let's explore whether there's a high-leverage project we can tackle together.</p>
-        <div class="cta-section__buttons">
-          <a href="https://bit.ly/lxd_working_session" class="btn btn--primary" target="_blank" rel="noopener">Book a 30-minute intro</a>
-          <a href="https://bit.ly/david_lxd_results" class="btn btn--secondary" target="_blank" rel="noopener">Download detailed case studies</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <a href="/" class="logo-lxd">
-        <img src="assets/logo-lxd.svg" alt="" width="48" height="20" />
-        <span class="wordmark">Learning By Design</span>
-      </a>
-      <p class="footer__copy">© Learning By Design LLC. All rights reserved.</p>
+<!-- ======= SPIKY POVs ======= -->
+<section id="pov" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Where we're opinionated</div>
+      <h2>A few things we'll tell you that others won't.</h2>
     </div>
-  </footer>
+    <div class="povs">
+      <div class="pov reveal">
+        <div class="n">On outbound</div>
+        <h3>Cold email is broken.</h3>
+        <p>Don't pour money into it until you're well past <b>$500K ARR</b>. We help you build the skills and hire an offshore BDR for hyper-personalized, human-driven outbound that actually gets replies and meetings, running ongoing at <b>under $1,500 a month</b> once ramped.</p>
+      </div>
+      <div class="pov reveal">
+        <div class="n">On building with AI</div>
+        <h3>The last 20% is the whole job.</h3>
+        <p>AI gets you a prototype in an afternoon. Getting it into your real stack, your cloud, your data is where <b>70% faster quietly becomes 15%</b>. That gap is exactly where we live.</p>
+      </div>
+      <div class="pov reveal">
+        <div class="n">On your stack</div>
+        <h3>Faster typing isn't AI-native.</h3>
+        <p>Engineers using a chatbot to type faster is not the same as an AI-native practice. We stand up the <b>agentic build loops</b> that compound, so speed comes from the system, not from one person going faster.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ======= LEAD MAGNET / WEDGE ======= -->
+<section id="wedge" style="padding-top:0">
+  <div class="wrap">
+    <div class="wedge reveal">
+      <div>
+        <div class="eyebrow" style="color:#7a5a26">Start here · the on-ramp</div>
+        <h2>Everyone needs to get off website builders.</h2>
+        <p>Webflow, Squarespace, Wix, and WordPress limit customization, speed, and your ability to use AI to spin up new pages, offers, case studies, and posts on demand. We migrate you to a custom stack on Vercel or Netlify, preserving your SEO and everything already working, so your site becomes something you and your AI/agents can build on.</p>
+        <p class="proof">Already done it: one client off Webflow, an insurtech company in progress.</p>
+      </div>
+      <div class="wedge-card">
+        <div class="big">Website migration</div>
+        <div class="price">starts at $5,000</div>
+        <p>About half what most shops charge. Add-ons: SEO/AEO, larger page sets, email lists. A concrete first project that pays for itself.</p>
+        <a class="btn gold" href="https://cal.com/davidfu/30min">Book a call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= PROOF / CASE STUDIES ======= -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Where we've done this before</div>
+      <h2>We don't just advise. We come alongside you and build.</h2>
+      <p>Real roles where we owned the outcome across product, GTM, and AI-native builds, and turned it into revenue, velocity, and AI systems that compound.</p>
+    </div>
+
+    <div class="group-label reveal">AI-native GTM · attention into pipeline into revenue</div>
+    <div class="cards">
+      <div class="case reveal">
+        <div class="nm">Willow Education</div>
+        <div class="meta">K12 career &amp; college readiness · founder-led → AI-native</div>
+        <div class="stat">50+</div><div class="statlabel">meetings from 500+ targeted accounts; 2,000+ ICPs identified; on track for ~5x revenue</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">100 School</div>
+        <div class="meta">AI upskilling · B2C → B2B pivot</div>
+        <div class="stat">$1M+</div><div class="statlabel">pipeline, $150K closed; pilots with BCG, Vanta, Ocado Retail, and counting</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">LeanLab Education</div>
+        <div class="meta">Edtech efficacy research · repositioned to a new ICP</div>
+        <div class="stat">$250K</div><div class="statlabel">closed in 90 days; clients incl. Magic School + McGraw Hill; handed to a full-time hire</div>
+      </div>
+    </div>
+
+    <div class="group-label reveal">Product 0→1 at scale · when there's no playbook and the stakes are real</div>
+    <div class="cards">
+      <div class="case reveal">
+        <div class="nm">African Leadership Group</div>
+        <div class="meta">Pan-African workforce dev · Group PM + Director</div>
+        <div class="stat">10x</div><div class="statlabel">user growth across 25 countries; activation 60→90%, retention 25→60%</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">Cloudforce nebulaONE</div>
+        <div class="meta">Series A AI platform · Owl Ventures, Microsoft</div>
+        <div class="stat">3x</div><div class="statlabel">token usage; spun up a Labs workstream; matured product strategy and roadmap</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">CNA Simulations</div>
+        <div class="meta">Healthcare learning · VP Product</div>
+        <div class="stat">$850K</div><div class="statlabel">workforce grant landed; AI voice-over across 4 languages and 100,000+ words</div>
+      </div>
+    </div>
+
+    <div class="group-label reveal">Practice building · turning bespoke delivery into a product, an ICP, and a GTM system</div>
+    <div class="cards">
+      <div class="case reveal">
+        <div class="nm">JFF Labs</div>
+        <div class="meta">Innovation arm, Jobs for the Future</div>
+        <div class="stat">Published</div><div class="statlabel">GenAI-in-workforce-dev landscape report; productization roadmap; mid-market ICP found</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">Shine / Acelero</div>
+        <div class="meta">Scaled early-childhood provider · BlackRock-backed</div>
+        <div class="stat">5 areas</div><div class="statlabel">AI-accelerated roadmaps; a reusable buy/build/partner decision framework</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">Imagine Worldwide</div>
+        <div class="meta">Pan-African K12 edtech &amp; efficacy nonprofit</div>
+        <div class="stat">4 countries</div><div class="statlabel">AI product + partner landscape; a next-phase roadmap for leadership</div>
+      </div>
+    </div>
+
+    <div class="group-label reveal">AI-native product builds · the build team, led by Vedansh</div>
+    <div class="cards">
+      <div class="case reveal">
+        <div class="nm">ReachAll AI</div>
+        <div class="meta">Voice AI · Fortune 500 · built from zero</div>
+        <div class="stat">&lt;300ms</div><div class="statlabel">latency vs 700–800ms standard; 3x cost reduction; 99.99% uptime</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">JetWriter AI</div>
+        <div class="meta">AI writing · multi-model Claude/GPT/Gemini</div>
+        <div class="stat">500K+</div><div class="statlabel">users, $20K MRR in year one; rebuilt as the model landscape shifted</div>
+      </div>
+      <div class="case reveal">
+        <div class="nm">Tryo</div>
+        <div class="meta">Try-before-you-buy marketplace · built from zero</div>
+        <div class="stat">10K</div><div class="statlabel">orders per month, every delivery under 60 minutes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= TEAM ======= -->
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The team</div>
+      <h2>Real builders who roll up their sleeves. Not consultants who leave you with playbooks without execution. Not just advice or strategy. </h2>
+      <!-- <p>You book one call and meet the two people who do the work: the product and GTM lead, and the CTO who ships.</p> -->
+    </div>
+    <div class="team-grid">
+      <div class="person lead reveal">
+        <div class="av">DF</div>
+        <h4>David Fu</h4>
+        <div class="role">Founder · GTM + product + AI enablement</div>
+        <p>15 years at the intersection of AI, GTM, product, and learning. Barclays banker turned Streetlight Schools co-founder, Group PM at African Leadership Group (10x scale), Reforge, and adjunct at Penn GSE. Now builds AI-native GTM and product for 100 School, Cloudforce, Willow, LeanLab, and JFF.</p>
+      </div>
+      <div class="person lead reveal">
+        <div class="av">VG</div>
+        <h4>Vedansh Garg</h4>
+        <div class="role">Fractional CTO · build lead</div>
+        <p>Ships AI-native products end to end, from Fortune 500 to startups. ReachAll voice AI (sub-300ms, 3x cost cut), JetWriter (500K users), Tryo (10K orders/mo). Architecture that runs a full product for $20–50/mo, migrations with no downtime, and CI/CD nobody has to babysit.</p>
+      </div>
+      <div class="person reveal">
+        <div class="av">NF</div>
+        <h4>Nicholas Fok</h4>
+        <div class="role">Quant → AI product</div>
+        <p>Exited founder. Building AI native products with Owl AI and Incubator School. Previously built institutional risk and investment-allocation systems at CPP (Canadian Pension Plan Investments) and Liberty Mutual.</p>
+      </div>
+      <div class="person reveal">
+        <div class="av">LM</div>
+        <h4>Louis Masensi</h4>
+        <div class="role">Production delivery</div>
+        <p>Runs a team of developers that are Claude-certified builders. Ships production software, not prototypes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= TESTIMONIALS ======= -->
+<section class="quotes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="color:var(--gold)">Voices</div>
+      <h2>What founders and leaders say.</h2>
+    </div>
+    <div class="qgrid">
+      <div class="quote reveal">
+        <p>"LXD helped me build Willow's B2B GTM engine. We were getting ~25% open rates but no replies, so we pivoted to highly personalized outbound. A new CRM, 150 personalized emails and 5+ high-value meetings a week. At ASU GSV, I did 2-3 months of work in 3 days. The foundation has us on track for ~5x revenue growth."</p>
+        <div class="who">James Cryan · CEO, Willow Education</div>
+      </div>
+      <div class="quote reveal">
+        <p>"LXD has been a cheat code for 100 School. He didn't just advise, he showed up like a cofounder, helping me align, prioritize, and face the hard decisions. The result: 7-figure pipeline created and 6-figures closed across major logos including BCG, Vanta, Ocado Retail, New Balance, and HG Capital portfolio companies Lucanet and Prophix."</p>
+        <div class="who">Max Haining · CEO, 100 School</div>
+      </div>
+      <div class="quote reveal">
+        <p>"David is a one of one. He was the critical lynchpin behind a massive scale-up for a product that had hit product-market fit, growing revenue 10x in under a year. His leadership unlocks a new level in his teams: people perform higher and solve problems they hadn't before."</p>
+        <div class="who">Seth Trudeau · then Chief Product Officer, African Leadership Group</div>
+      </div>
+      <div class="quote reveal">
+        <p>"LXD brought crucial energy and momentum to our tiger team when we needed GTM and productization expertise. They delivered a comprehensive market landscape analysis, went beyond simple sizing to uncover atypical insights, and gave leadership the clarity to make key strategic decisions."</p>
+        <div class="who">Jennifer Giffels · then project lead, JFF Labs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FINAL CTA ======= -->
+<section id="contact" class="final">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Let's go</div>
+      <h2>Come build the right things,<br>the right way.</h2>
+      <p>Book a call with David and Vedansh. Bring your site or your stack and we'll give you a real read on your product and GTM, and whether we're a fit.</p>
+      <a class="btn gold" href="https://cal.com/davidfu/30min" style="font-size:17px;padding:15px 26px">Book a call with David &amp; Vedansh</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div><span class="logo" style="display:inline-grid;vertical-align:middle;margin-right:8px">LXD</span> Learning By Design AI · AI By Design</div>
+    <div style="display:flex;gap:20px">
+      <a href="https://www.learningbydesign.ai/">learningbydesign.ai</a>
+      <a href="http://linkedin.com/company/learningxdesign">LinkedIn</a>
+      <a href="https://learningbydesign.substack.com">Substack</a>
+      <a href="https://cal.com/davidfu/30min">Book a call</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  nav.addEventListener('click',function(e){ if(e.target.tagName==='A') nav.classList.remove('open'); });
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+</script>
 </body>
 </html>
