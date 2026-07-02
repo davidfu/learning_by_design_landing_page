@@ -1,13 +1,16 @@
-# macOS
+# OS
 .DS_Store
 
-# Editor / IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# Vercel
+.vercel
 
-# Optional
-node_modules/
-.env
-.env.local
+# Node (only used by the Substack feed function; Vercel installs on its own)
+node_modules
+npm-debug.log*
+
+# Editor
+.vscode
+.idea
+
+# Source logo drop (originals kept locally; served copies live in assets/logos/)
+/logos/

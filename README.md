@@ -1,46 +1,39 @@
-# Learning By Design – Landing Page
+# Learning By Design AI — landing site
 
-Landing site for **Learning By Design** (LXD): AI-native GTM, product, and education consulting.
-
-## Pages
-
-- **`index.html`** – Main landing page: hero, personas, who I work with, services (5 offers), why LXD, results, how engagements work, FAQ, contact.
-- **`revenue-os.html`** – Revenue OS.ai product page: problem, what it is, what’s included, outcomes, fit, sprint phases, about David, apply CTA.
-
-## Design
-
-- **Colors:** black, white, ivory (#fffff0), copper (#b87333), mint (#1bbe90), British racing green (#143b22), bistro brown (#3b2214).
-- **Typography:** Lora (serif) for body, DM Sans (sans) for headings and UI.
-- **Logo:** LXD mark (stylized X from two V shapes) in `assets/logo-lxd.svg`.
-
-## Run locally
-
-Open `index.html` in a browser, or use a simple static server:
-
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:3000` (or 8000).
-
-## Customize
-
-- **Contact / booking:** Update CTA links (e.g. `href="https://calendly.com/..."`) in `index.html` and `revenue-os.html`.
-- **Testimonials:** Replace placeholder quotes in the “Why Learning By Design” section with real client quotes.
-- **Articles / Resources:** Replace the placeholder section with links or a blog when ready.
+Static marketing site for [learningbydesign.ai](https://learningbydesign.ai), deployed on Vercel.
 
 ## Structure
 
 ```
-├── index.html          # Main landing
-├── revenue-os.html      # Revenue OS.ai page
-├── css/
-│   └── styles.css      # Design system + component styles
-├── js/
-│   └── main.js         # Mobile nav toggle
-├── assets/
-│   └── logo-lxd.svg    # LXD logo
-└── README.md
+index.html              Landing page
+blog.html               "Writing" page — lists all Substack posts
+api/substack-feed.js    Serverless function: fetches + parses the Substack RSS (server-side, no CORS)
+assets/logos/           Client / investor / upskilling logos (served copies)
+assets/og-image.png     1200×630 social share image
+vercel.json             Clean URLs + long-cache headers for /assets
+robots.txt, sitemap.xml SEO
 ```
+
+## Local preview
+
+It's a static site plus one serverless function. Easiest full-fidelity preview:
+
+```bash
+npx vercel dev     # serves index.html + the /api/substack-feed function
+```
+
+Or just open `index.html` in a browser (the blog feed needs the serverless function,
+so it falls back to a "read on Substack" link when opened as a bare file).
+
+## Deploy
+
+Connected to Vercel via GitHub — every push to `main` deploys automatically.
+No build step; Vercel serves the static files and runs `api/` as Node functions.
+
+## The Substack feed
+
+`blog.html` calls `/api/substack-feed`, which fetches
+`https://learningbydesign.substack.com/feed`, parses the RSS, and returns JSON.
+Results are edge-cached for 1 hour. New Substack posts appear automatically —
+nothing to redeploy. If the feed is ever unreachable, the page degrades to a
+"read them all on Substack" link.
