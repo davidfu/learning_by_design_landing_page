@@ -345,3 +345,6 @@
     .logotrack{animation:none}
     .logomarquee{overflow-x:auto}
   }
+
+  /* pure-white logos flipped to dark so they read on a light chip (interim until a color file is supplied) */
+  .lchip.inv img{filter:invert(1)}

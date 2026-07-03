@@ -1,9 +1,10 @@
 "use client";
 
 // Data-driven logo bands, each an infinite-scroll carousel. To add a logo: drop
-// the file in public/assets/logos/ and add an entry here. `dark: true` puts it on
-// a dark chip (for white/reversed logos).
-type Logo = { name: string; file: string; dark?: boolean };
+// the file in public/assets/logos/ and add an entry here.
+//   dark:   true  -> dark chip (for reversed/white logos that have color elements)
+//   invert: true  -> light chip, but CSS-invert a pure-white logo to render dark
+type Logo = { name: string; file: string; dark?: boolean; invert?: boolean };
 
 const clients: Logo[] = [
   { name: "General Assembly", file: "general-assembly.png" },
@@ -35,7 +36,7 @@ const upskilled: Logo[] = [
 const backers: Logo[] = [
   { name: "a16z", file: "a16z.png" },
   { name: "Tiger Global", file: "tiger-global.png" },
-  { name: "Y Combinator", file: "y-combinator.svg", dark: true },
+  { name: "Y Combinator", file: "y-combinator.svg", invert: true },
   { name: "Techstars", file: "techstars.svg" },
   { name: "On Deck", file: "on-deck.svg" },
   { name: "Owl Ventures", file: "owl-ventures.webp" },
@@ -48,7 +49,11 @@ const backers: Logo[] = [
 
 function Chip({ logo, ariaHidden }: { logo: Logo; ariaHidden: boolean }) {
   return (
-    <span className={`lchip${logo.dark ? " dark" : ""}`} data-name={logo.name} aria-hidden={ariaHidden || undefined}>
+    <span
+      className={`lchip${logo.dark ? " dark" : ""}${logo.invert ? " inv" : ""}`}
+      data-name={logo.name}
+      aria-hidden={ariaHidden || undefined}
+    >
       <img
         src={`/assets/logos/${logo.file}`}
         alt={ariaHidden ? "" : logo.name}
