@@ -239,11 +239,17 @@
   .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
   .person{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
   .person.lead{border-color:var(--gold);box-shadow:0 14px 34px -26px rgba(8,24,40,.5)}
-  .person .av{width:46px;height:46px;border-radius:11px;background:var(--peach);color:var(--ink);
-    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:17px;margin-bottom:14px}
+  .person .av{width:64px;height:64px;border-radius:14px;overflow:hidden;background:var(--peach);color:var(--ink);
+    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:19px;margin-bottom:14px}
+  .person .av img{width:100%;height:100%;object-fit:cover;display:block}
   .person h4{font-family:var(--display);font-size:17px;margin:0}
   .person .role{font-size:13px;color:var(--orange);font-weight:600;margin:2px 0 10px}
   .person p{font-size:13.5px;color:var(--muted);margin:0}
+  .person .plinks{display:flex;gap:16px;margin-top:14px;padding-top:13px;border-top:1px solid var(--line)}
+  .person .plinks a{font-family:var(--display);font-weight:600;font-size:12.5px;color:var(--ink);
+    text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .person .plinks a:hover{color:var(--orange)}
+  .person .plinks svg{width:15px;height:15px;flex:none}
 
   /* testimonials */
   .quotes{background:var(--navy);color:#eaf0f7}
@@ -753,28 +759,42 @@
     </div>
     <div class="team-grid">
       <div class="person lead reveal">
-        <div class="av">DF</div>
+        <div class="av"><img src="assets/team/david.jpg" alt="David Fu" loading="lazy"></div>
         <h4>David Fu</h4>
         <div class="role">Founder · GTM + product + AI enablement</div>
         <p>15 years at the intersection of AI, GTM, product, and learning. Barclays banker turned Streetlight Schools co-founder, Group PM at African Leadership Group (10x scale), Reforge, and adjunct at Penn GSE. Now builds AI-native GTM and product for 100 School, Cloudforce, Willow, LeanLab, and JFF.</p>
+        <div class="plinks">
+          <a href="https://linkedin.com/in/davidthefu/" target="_blank" rel="noopener" aria-label="David Fu on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+        </div>
       </div>
       <div class="person lead reveal">
-        <div class="av">VG</div>
+        <div class="av"><img src="assets/team/vedansh.jpg" alt="Vedansh Garg" loading="lazy"></div>
         <h4>Vedansh Garg</h4>
         <div class="role">Fractional CTO · build lead</div>
         <p>Ships AI-native products end to end, from Fortune 500 to startups. ReachAll voice AI (sub-300ms, 3x cost cut), JetWriter (500K users), Tryo (10K orders/mo). Architecture that runs a full product for $20–50/mo, migrations with no downtime, and CI/CD nobody has to babysit.</p>
+        <div class="plinks">
+          <a href="https://www.linkedin.com/in/vedanshgarg/" target="_blank" rel="noopener" aria-label="Vedansh Garg on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+          <a href="https://vedanshgarg.com" target="_blank" rel="noopener" aria-label="Vedansh Garg website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>Website</a>
+        </div>
       </div>
       <div class="person reveal">
-        <div class="av">NF</div>
+        <div class="av"><img src="assets/team/nicholas.jpg" alt="Nicholas Fok" loading="lazy"></div>
         <h4>Nicholas Fok</h4>
         <div class="role">Quant → AI product</div>
         <p>Exited founder. Building AI native products with Owl AI and Incubator School. Previously built institutional risk and investment-allocation systems at CPP (Canadian Pension Plan Investments) and Liberty Mutual.</p>
+        <div class="plinks">
+          <a href="https://www.linkedin.com/in/nickfok/" target="_blank" rel="noopener" aria-label="Nicholas Fok on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+          <a href="https://nicholasfok.com" target="_blank" rel="noopener" aria-label="Nicholas Fok website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>Website</a>
+        </div>
       </div>
       <div class="person reveal">
-        <div class="av">LM</div>
+        <div class="av"><img src="assets/team/louis.jpg" alt="Louis Masensi" loading="lazy"></div>
         <h4>Louis Masensi</h4>
         <div class="role">Production delivery</div>
         <p>Runs a team of developers that are Claude-certified builders. Ships production software, not prototypes.</p>
+        <div class="plinks">
+          <a href="https://www.linkedin.com/in/louis-masensi/" target="_blank" rel="noopener" aria-label="Louis Masensi on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+        </div>
       </div>
     </div>
   </div>
