@@ -229,10 +229,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lchip.noimg::after{content:attr(data-name)}
   /* dark chips for white/reversed logos so they stay visible on the light strip */
   .lchip.dark{background:var(--ink);border-color:var(--ink)}
-  /* softer, sentence-case band label with a category subline */
-  .logoband .lab.soft{text-transform:none;letter-spacing:.01em;font-size:15px;color:var(--ink);font-weight:700}
-  .logoband .lab.soft .sub{display:block;font-family:var(--body);font-weight:500;font-size:13px;
-    letter-spacing:0;color:var(--muted);text-transform:none;margin-top:4px}
+  /* category subline under a standard band label — smaller, warm tan, lowercase */
+  .logoband .lab .sub{display:block;font-weight:500;font-size:11px;letter-spacing:.02em;
+    text-transform:none;color:var(--orange);opacity:.72;margin-top:5px}
+  /* white/reversed logos rendered as a clean black mark on a white chip
+     (brightness(0) makes a solid silhouette without hue-shifting colored parts) */
+  .lchip.inv img{filter:brightness(0)}
 
   /* substack strip */
   .substack{background:var(--gold-soft);border-bottom:1px solid var(--line)}
@@ -490,14 +492,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="logoband reveal">
-      <div class="lab soft">Leaders we've upskilled with AI come from<span class="sub">education · startup &amp; investing nonprofits · networks · small &amp; medium businesses</span></div>
+      <div class="lab">Leaders we've upskilled with AI come from<span class="sub">education · startup &amp; investing nonprofits · networks · small &amp; medium businesses</span></div>
       <div class="logorow">
         <span class="lchip" data-name="Johns Hopkins"><img src="assets/logos/johns-hopkins.png" alt="Johns Hopkins" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Ward Infinity"><img src="assets/logos/ward-infinity.jpg" alt="Ward Infinity" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Penn GSE"><img src="assets/logos/penn-gse.png" alt="Penn GSE" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
         <span class="lchip" data-name="Imagine Worldwide"><img src="assets/logos/imagine-worldwide.png" alt="Imagine Worldwide" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Coherent Math"><img src="assets/logos/coherent-math.png" alt="Coherent Math" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="XtraMath"><img src="assets/logos/xtramath.png" alt="XtraMath" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
-        <span class="lchip dark" data-name="School Harbor"><img src="assets/logos/school-harbor.png" alt="School Harbor" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Kids Grit"><img src="assets/logos/kids-grit.png" alt="Kids Grit" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip dark" data-name="Chestnut"><img src="assets/logos/chestnut.png" alt="Chestnut" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
-        <span class="lchip dark" data-name="Harbinger Lane"><img src="assets/logos/harbinger-lane.png" alt="Harbinger Lane" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Started"><img src="assets/logos/started.png" alt="Started" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip dark" data-name="StartEd"><img src="assets/logos/started-etw.png" alt="StartEd" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip inv" data-name="School Harbor"><img src="assets/logos/school-harbor.png" alt="School Harbor" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Kids Grit"><img src="assets/logos/kids-grit.png" alt="Kids Grit" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip inv" data-name="Chestnut"><img src="assets/logos/chestnut.png" alt="Chestnut" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip inv" data-name="Harbinger Lane"><img src="assets/logos/harbinger-lane.png" alt="Harbinger Lane" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Started"><img src="assets/logos/started.png" alt="Started" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip inv" data-name="StartEd"><img src="assets/logos/started-etw.png" alt="StartEd" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
         <span class="lchip" data-name="Evergreen Education AI"><img src="assets/logos/evergreen-education-ai.png" alt="Evergreen Education AI" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Promise Venture Studio"><img src="assets/logos/promise-venture-studio.png" alt="Promise Venture Studio" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Transcend Network"><img src="assets/logos/transcend-network.png" alt="Transcend Network" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
-        <span class="lchip dark" data-name="Angel Squad"><img src="assets/logos/angel-squad.png" alt="Angel Squad" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="FOHE"><img src="assets/logos/fohe.png" alt="FOHE" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip inv" data-name="Angel Squad"><img src="assets/logos/angel-squad.png" alt="Angel Squad" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="FOHE"><img src="assets/logos/fohe.png" alt="FOHE" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Springboard"><img src="assets/logos/springboard.png" alt="Springboard" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="100 School"><img src="assets/logos/100-school.png" alt="100 School" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Instituto Sol"><img src="assets/logos/instituto-sol.png" alt="Instituto Sol" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
+        <span class="lchip" data-name="Programadores do Amanhã"><img src="assets/logos/programadores-do-amanha.png" alt="Programadores do Amanhã" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span><span class="lchip" data-name="Devsnest"><img src="assets/logos/devsnest.png" alt="Devsnest" onerror="this.style.display='none';this.parentNode.classList.add('noimg')"></span>
       </div>
     </div>
   </div>
