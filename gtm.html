@@ -139,6 +139,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lchip img{height:26px;max-width:134px;width:auto;object-fit:contain;display:block}
   .lchip.noimg::after{content:attr(data-name)}
   .lchip.inv img{filter:brightness(0)}
+  /* near-square logos (e.g. CSGF) need more height to stay legible */
+  .lchip.tall{padding:5px 14px}
+  .lchip.tall img{height:36px}
   .bands{display:grid;grid-template-columns:1.3fr 1fr;gap:30px}
 
   /* problem */
@@ -367,7 +370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="lab">Our GTM clients are backed by</div>
         <div class="logorow">
           <span class="lchip" data-name="a16z"><img src="assets/logos/a16z.png" alt="a16z" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
-          <span class="lchip" data-name="CSGF"><img src="assets/logos/csgf.png" alt="Charter School Growth Fund" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip tall" data-name="CSGF"><img src="assets/logos/csgf.png" alt="Charter School Growth Fund" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
           <span class="lchip" data-name="Transcend Network"><img src="assets/logos/transcend-network.png" alt="Transcend Network" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
           <span class="lchip" data-name="NewSchools Venture Fund"><img src="assets/logos/nsvf.png" alt="NewSchools Venture Fund" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
         </div>
