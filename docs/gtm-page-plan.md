@@ -96,11 +96,11 @@ Not edtech? · Hire first or build first? · Which tools? · Isn't cold email de
 
 ## Open items for David
 - [ ] **Logos:** drop `edstruments.png`, `csgf.png`, `nsvf.png` into `assets/logos/`. The page already points at those paths and shows a text chip until the files exist.
-- [ ] Confirm **CSGF = Charter School Growth Fund** (the alt text uses that).
-- [ ] Confirm it's OK to **name Chestnut** publicly (the outreach emails sometimes say "an a16z-backed seed insurtech").
+- [x] CSGF = Charter School Growth Fund (confirmed).
+- [x] Chestnut OK to name publicly (confirmed).
 - [ ] **XtraMath** Problem/Action copy is generic. Add specifics (which funders or partners, timeframe).
-- [ ] Booking link: the site uses `cal.com/davidfu/30min` and the outreach emails use `calendly.com/davidfu`. Pick one.
+- [x] Booking link: `cal.com/davidfu/30min` (uses the learningbydesign.ai email).
 - [ ] Add **Felix** to the team strip if he's client-facing on GTM builds.
 - [ ] Consider adding **LeanLab** ($250K closed in 90 days) as a sixth case.
-- [ ] Decide what happens to the older `revenue-os.html` (it overlaps this page): redirect it to `/gtm`?
-- [ ] Julian's feedback step: show the page to 2 people outside the market and 2 inside, and rate conversion / interest / clarity / expansion / brevity / disbelief.
+- [x] `revenue-os.html` removed; `/revenue-os` and `/revenue-os.html` 301 to `/gtm` (vercel.json).
+- [ ] Post-launch feedback (going live first), Julian's step: show the page to 2 people outside the market and 2 inside, and rate conversion / interest / clarity / expansion / brevity / disbelief.
