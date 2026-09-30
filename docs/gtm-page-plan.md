@@ -104,3 +104,11 @@ Not edtech? · Hire first or build first? · Which tools? · Isn't cold email de
 - [ ] Consider adding **LeanLab** ($250K closed in 90 days) as a sixth case.
 - [x] `revenue-os.html` removed; `/revenue-os` and `/revenue-os.html` 301 to `/gtm` (vercel.json).
 - [ ] Post-launch feedback (going live first), Julian's step: show the page to 2 people outside the market and 2 inside, and rate conversion / interest / clarity / expansion / brevity / disbelief.
+
+---
+
+## v2: simplified (Sept 29)
+- Cut from ~2,000 to ~500 words, going from 11 sections to 6: hero, logos, what we set up (+ stages), recent work, team, CTA.
+- New headline: "AI-native GTM and RevOps to power your growing sales team." (The old one read like recruiting.)
+- Hiring help is now one line. Added Felix Akojenu (AI GTM Engineer) to the team; his photo goes at `assets/team/felix.jpg`, and "FA" initials show until then.
+- v1 is archived at `archive/gtm-v1.html`. `.vercelignore` keeps `archive/` and `docs/` off the live site.
