@@ -14,3 +14,12 @@ npm-debug.log*
 
 # Source logo drop (originals kept locally; served copies live in assets/logos/)
 /logos/
+
+# Secrets / environment variables — never commit these
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Local preview config
+.claude/launch.json
