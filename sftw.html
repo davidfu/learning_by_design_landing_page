@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N28T7R3S');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SF Tech Week events, in one place | Learning By Design AI</title>
+<meta name="description" content="Every event shared in the SF Tech Week WhatsApp group, plus the full meta tracker. Curated from Atlanta by David Fu.">
+<meta name="author" content="Learning By Design AI">
+<link rel="canonical" href="https://learningbydesign.ai/sftw">
+<!-- temporary community page, keep out of search -->
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#1E3A5F">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learning By Design AI">
+<meta property="og:url" content="https://learningbydesign.ai/sftw">
+<meta property="og:title" content="SF Tech Week events, in one place">
+<meta property="og:description" content="Every event shared in the group, sorted by day. Plus free GTM teardowns for B2B founders.">
+<meta property="og:image" content="https://learningbydesign.ai/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SF Tech Week events, in one place">
+<meta name="twitter:description" content="Every event shared in the group, sorted by day. Plus free GTM teardowns for B2B founders.">
+<meta name="twitter:image" content="https://learningbydesign.ai/assets/og-image.png">
+
+<link rel="icon" href="/assets/logos/logo-lxd.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logos/logo-lxd.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF6EE; --paper2:#F2EADA; --gold:#FAD392; --gold-soft:#FFF3DC;
+    --orange:#B87030; --navy:#1E3A5F; --navy-soft:#DDE6EF;
+    --peach:#FFDFCA; --ink:#081828; --muted:#55606E; --line:#E8DEC9;
+    --display:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;margin:0}
+  p{margin:0 0 1em}
+  .eyebrow{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--orange)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(250,246,238,.86);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:24px;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;
+    font-size:17px;text-decoration:none}
+  .logo{width:34px;height:34px;background:var(--ink);color:var(--gold);border-radius:7px;
+    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.04em}
+  .nav-links{display:flex;gap:26px;margin-left:auto;align-items:center}
+  .nav-links a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;
+    font-size:15px;text-decoration:none;border-radius:10px;padding:11px 18px;border:1.5px solid var(--ink);
+    background:var(--ink);color:var(--paper);transition:transform .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .nav-links a.btn{color:var(--ink)}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;margin-left:auto;padding:6px}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0}
+
+  section{padding:64px 0}
+  section[id]{scroll-margin-top:72px}
+  h2{font-size:clamp(26px,3.2vw,36px);letter-spacing:-.01em}
+  .sub{font-size:17px;color:var(--muted);margin:12px 0 0;max-width:62ch}
+
+  /* page order: events first before Oct 9, follow-up offer first after */
+  main{display:flex;flex-direction:column}
+  #events-block{order:1} #teardown{order:2} #about{order:3}
+  body.post #events-block{order:2} body.post #teardown{order:1}
+  .post-only{display:none}
+  body.post .post-only{display:block}
+  body.post .pre-only{display:none}
+
+  /* hero */
+  .hero{padding:72px 0 48px}
+  .hero h1{font-size:clamp(36px,5vw,56px);letter-spacing:-.015em;margin:16px 0 0;max-width:18ch}
+  .hero .lede{font-size:19px;color:var(--muted);margin:22px 0 0;max-width:56ch}
+  .hero .who{font-size:14.5px;color:var(--muted);margin:14px 0 0}
+  .hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .leave{list-style:none;padding:0;margin:24px 0 0;max-width:56ch}
+  .leave li{position:relative;padding:0 0 0 30px;margin:0 0 12px;font-size:16.5px}
+  .leave li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:5px;background:var(--gold)}
+
+  /* featured tracker */
+  .featured{background:#fff;border:2px solid var(--gold);border-radius:18px;padding:24px;
+    display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .featured .lab{margin-bottom:6px}
+  .featured h3{font-size:22px;max-width:28ch}
+  .featured p{font-size:15px;color:var(--muted);margin:8px 0 0}
+  .lab{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+
+  /* events */
+  .days{display:flex;gap:8px;margin:24px 0 0;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .days::-webkit-scrollbar{display:none}
+  .days a{flex:none;font-family:var(--display);font-weight:600;font-size:14px;text-decoration:none;
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+  .days a:hover{border-color:var(--ink)}
+  .days a.past{color:var(--muted)}
+  .day{margin-top:34px;scroll-margin-top:84px}
+  .day h3{font-size:20px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px}
+  .day h3 .ct{font-family:var(--body);font-weight:500;font-size:14px;color:var(--muted)}
+  .day h3 .gone{font-family:var(--body);font-weight:600;font-size:12px;color:var(--muted);
+    background:var(--paper2);border-radius:999px;padding:2px 9px}
+  .ev-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .ev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column}
+  .ev .t{font-family:var(--display);font-weight:600;font-size:13px;color:var(--orange);letter-spacing:.02em}
+  .ev h4{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.2;margin:6px 0 4px}
+  .ev .host{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+  .ev .blurb{font-size:15px;margin:0 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+  .tag{font-size:12px;font-weight:600;background:var(--navy-soft);color:var(--navy);border-radius:999px;padding:3px 10px}
+  .ev .btn{margin-top:auto;align-self:flex-start;padding:9px 16px;font-size:14px}
+  .day.past .ev{opacity:.5}
+  .day.past .ev .btn{background:transparent;color:var(--ink)}
+  .missing{font-size:15.5px;color:var(--muted);margin:30px 0 0}
+  .missing a{color:var(--ink);font-weight:600}
+
+  /* teardown */
+  #teardown{background:var(--peach)}
+  #teardown .sub+.sub{margin-top:10px}
+  #teardown .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--navy)}
+  .item h3{font-size:18px;margin-bottom:6px}
+  .item p{font-size:15px;color:var(--muted);margin:0}
+  .td-cta{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:28px}
+    .proof{margin-top:36px}
+  .logorow{display:flex;flex-wrap:wrap;gap:12px}
+  .lchip{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink);background:#fff;
+    border:1px solid var(--line);border-radius:10px;padding:10px 16px;white-space:nowrap;
+    display:inline-flex;align-items:center;justify-content:center;min-height:46px;min-width:66px}
+  .lchip img{height:26px;max-width:134px;width:auto;object-fit:contain;display:block}
+  .lchip.noimg::after{content:attr(data-name)}
+  .lchip.inv img{filter:brightness(0)}
+
+  /* about */
+  .about{display:flex;gap:20px;align-items:flex-start;max-width:720px}
+  .av{flex:none;width:72px;height:72px;border-radius:16px;overflow:hidden;background:var(--peach)}
+  .av img{width:100%;height:100%;object-fit:cover;display:block}
+  .about p{font-size:16px;color:var(--muted);margin:0 0 10px}
+  .about a{font-family:var(--display);font-weight:600;font-size:15px}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;font-size:14px;color:var(--muted)}
+  .foot-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  .foot-row a{text-decoration:none}
+
+  @media(max-width:920px){
+    .wrap{padding:0 16px}
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;
+      background:var(--paper);padding:18px 16px;border-bottom:1px solid var(--line);gap:16px}
+    .menu-toggle{display:block}
+    .ev-list,#teardown .sub+.sub{margin-top:10px}
+  #teardown .three{grid-template-columns:1fr}
+    .hero{padding:44px 0 36px}
+    section{padding:48px 0}
+  }
+  @media(max-width:560px){
+    .hero-cta .btn,.featured .btn,.td-cta .btn{width:100%}
+    .brand{font-size:15px}
+  }
+  @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N28T7R3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="logo">LXD</span> Learning By Design AI</a>
+    <nav class="nav-links" id="nav">
+      <a href="#events">Events</a>
+      <a href="#teardown">Teardowns</a>
+      <a class="btn gold" data-link="book" href="https://cal.com/davidfu/30min" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+    <button class="menu-toggle" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero: Oct 2 to Oct 8 -->
+<section class="hero pre-only">
+  <div class="wrap">
+    <div class="eyebrow">#SFTechWeek · Oct 5 to 9</div>
+    <h1>SF Tech Week, in one place.</h1>
+    <p class="lede">Every event shared in the WhatsApp group, sorted by day. I'm not in SF this year, so I'm trying to be useful from Atlanta instead.</p>
+    <p class="who">David Fu, founder, Learning By Design AI</p>
+    <div class="hero-cta">
+      <a class="btn gold" href="#events">See the events</a>
+      <a class="btn ghost" data-link="teardown" data-track="sftw_teardown_request" href="#" target="_blank" rel="noopener">Book a call for a free GTM teardown</a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero: from Oct 9 -->
+<section class="hero post-only">
+  <div class="wrap">
+    <div class="eyebrow">Back from #SFTechWeek?</div>
+    <h1>You met 60 people. Now what?</h1>
+    <p class="lede">Most Tech Week contacts go cold within two weeks. Book 30 minutes and I'll set up a Claude-powered follow-up workflow for your Tech Week contacts while we're on the call.</p>
+    <ul class="leave">
+      <li>Your contacts in one list, sorted by who's worth following up with</li>
+      <li>Personalized first drafts for each follow-up, ready for you to edit and send</li>
+      <li>A simple system you can reuse after your next conference</li>
+    </ul>
+    <div class="hero-cta">
+      <a class="btn gold" data-link="followup" data-track="sftw_followup_book" href="#" target="_blank" rel="noopener">Book a follow-up session</a>
+      <a class="btn ghost" href="#events">See the events</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div id="events-block">
+    <section id="events" style="padding-top:8px">
+      <div class="wrap">
+        <div class="featured">
+          <div>
+            <div class="lab">Start here</div>
+            <h3 id="trackerTitle">The meta tracker for every SF Tech Week event</h3>
+            <p id="trackerCredit">The most complete list out there. Thanks to Laura Keith for sharing it with the group.</p>
+          </div>
+          <a class="btn gold" id="trackerLink" data-track="sftw_tracker_click" href="https://sf-techweek.vercel.app/" target="_blank" rel="noopener">Open the tracker</a>
+        </div>
+
+        <h2 style="margin-top:48px">Shared in the group</h2>
+        <p class="sub">Events posted in the WhatsApp group since I joined. Check each link for RSVP rules, some fill up fast.</p>
+        <nav class="days" id="dayTabs" aria-label="Jump to day"></nav>
+        <div id="eventList"></div>
+        <p class="missing">Spotted one I missed? <a href="mailto:david.fu@learningbydesign.ai?subject=sftw%20event%20to%20add">Send it to me and I'll add it.</a></p>
+      </div>
+    </section>
+  </div>
+
+  <section id="teardown">
+    <div class="wrap">
+      <div class="eyebrow">For B2B founders</div>
+      <h2 style="margin-top:12px">Need some constructive feedback on your GTM?</h2>
+      <p class="sub">Book time with me and DM me your name, LinkedIn and company URL.</p>
+      <p class="sub">When we get on a call, after intros, I'll do a free teardown on your positioning, ICP and go-to-market motion.</p>
+      <div class="three">
+        <div class="item"><h3>Positioning</h3><p>Is it clear in 5 seconds who you're for and why you win?</p></div>
+        <div class="item"><h3>ICP</h3><p>Are you aiming at the buyers most likely to say yes?</p></div>
+        <div class="item"><h3>GTM motion</h3><p>What your first repeatable outbound motion should look like.</p></div>
+      </div>
+      <div class="td-cta">
+        <a class="btn" data-link="teardown" data-track="sftw_teardown_request" href="#" target="_blank" rel="noopener">Book time to chat</a>
+      </div>
+      <div class="proof">
+        <div class="lab">Recent GTM clients</div>
+        <div class="logorow">
+          <span class="lchip" data-name="Willow Education"><img src="assets/logos/willow.png" alt="Willow Education" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip inv" data-name="Chestnut"><img src="assets/logos/chestnut.png" alt="Chestnut" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="Edstruments"><img src="assets/logos/edstruments.png" alt="Edstruments" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="100 School"><img src="assets/logos/100-school.png" alt="100 School" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="XtraMath"><img src="assets/logos/xtramath.png" alt="XtraMath" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="Roo"><img src="assets/logos/roo.png" alt="Roo" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="Cloudforce"><img src="assets/logos/cloudforce.png" alt="Cloudforce" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+          <span class="lchip" data-name="Mindset Copilot"><img src="assets/logos/mindset-copilot.png" alt="Mindset Copilot" onerror="this.parentNode.classList.add('noimg');this.remove()"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="av"><img src="assets/team/david.jpg" alt="David Fu" loading="lazy"></div>
+      <div>
+        <p>David Fu leads GTM for B2B and edtech teams at Learning By Design AI. He co-founded Streetlight Schools, helped scale African Leadership Group 10x, and teaches at Penn GSE.</p>
+        <a href="/gtm">See how we work</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <div><span class="logo" style="display:inline-grid;vertical-align:middle;margin-right:8px">LXD</span> Learning By Design AI</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap">
+      <a href="/">learningbydesign.ai</a>
+      <a href="http://linkedin.com/company/learningxdesign">LinkedIn</a>
+      <a href="https://learningbydesign.substack.com">Substack</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Links ----
+  var LINKS = {
+    book: "https://cal.com/davidfu/30min",
+    teardown: "https://calendly.com/davidfu/sftw2026",
+    followup: "https://calendly.com/davidfu/sftw2026"
+  };
+
+  // ---- Data: add events here, layout updates itself ----
+  var META_TRACKER = {
+    title: "The meta tracker for every SF Tech Week event",
+    url: "https://sf-techweek.vercel.app/",
+    credit: "Thanks to Laura Keith for sharing it with the group."
+  };
+
+  var EVENTS = [
+    {
+      day: "2026-10-05",
+      dayLabel: "Mon Oct 5",
+      time: "Evening",
+      title: "Official Tech Week Kickoff: SF Tech Week Opening Party",
+      host: "Fireworks x a16z, with Vercel, ElevenLabs and Stripe",
+      blurb: "The official opening party. Invite only, find it by searching the featured events on tech-week.com.",
+      tags: ["Party", "Invite only"],
+      url: "https://www.tech-week.com",
+      cta: "Find on Tech Week"
+    },
+    {
+      day: "2026-10-06",
+      dayLabel: "Tue Oct 6",
+      time: "10:30am",
+      title: "Pink Out! Marketing Fireside Chat: Earning Loyalty",
+      host: "VESTER + OnlyExit, benefiting Imerman Angels",
+      blurb: "Marketers talking about why customers actually stay. Free, pink attire encouraged, donations go to Imerman Angels.",
+      tags: ["Marketing", "Free", "Benefit"],
+      url: "https://partiful.com/e/u5KK34XZKOTRKCsoTxem",
+      cta: "RSVP"
+    },
+    {
+      day: "2026-10-07",
+      dayLabel: "Wed Oct 7",
+      time: "10:00am",
+      title: "Building forward after accelerator turndowns",
+      host: "Buu Duong",
+      blurb: "Investors on what matters at the early stage and the paths forward without an accelerator.",
+      tags: ["Founders", "Fundraising"],
+      url: "https://partiful.com/e/ho3x950YhQCSCBAYOgJp",
+      cta: "RSVP"
+    },
+    {
+      day: "2026-10-07",
+      dayLabel: "Wed Oct 7",
+      time: "See Luma",
+      title: "OpenAI Forum Community Walk + Coffee",
+      host: "Austin Volz and Priscilla Lau",
+      blurb: "A walk from Rincon Park to Philz on Front St, joined by Caitlin Maltbie from OpenAI's Global Affairs team. Coffee is on OpenAI.",
+      tags: ["AI", "Community", "Free"],
+      url: "https://luma.com/2gswipjn",
+      cta: "Register"
+    },
+    {
+      day: "2026-10-07",
+      dayLabel: "Wed Oct 7",
+      time: "5:00 to 8:00pm",
+      title: "Executive Roundtable: Future of People Tech",
+      host: "All Good HR + Founders Foundry",
+      blurb: "A private working session for HR tech, HRIS and people analytics leaders. 15 spots, Chatham House Rule.",
+      tags: ["HR tech", "Executives", "15 spots"],
+      url: "https://partiful.com/e/X4egjcGxn3HNacdTfeAP",
+      cta: "RSVP"
+    },
+    {
+      day: "2026-10-07",
+      dayLabel: "Wed Oct 7",
+      time: "5:30pm",
+      title: "hi, cofounder",
+      host: "Buu Duong",
+      blurb: "Small-group activities for founders looking for a cofounder and builders serious about joining one.",
+      tags: ["Founders", "Cofounder matching"],
+      url: "https://partiful.com/e/P1lPz0uU4k1IQEsKTCLn",
+      cta: "RSVP"
+    },
+    {
+      day: "2026-10-08",
+      dayLabel: "Thu Oct 8",
+      time: "Morning",
+      title: "Rise & Flow",
+      host: "Ava Bizjak, Nicole Ju + Sisters Female Founders",
+      blurb: "Beginner yoga, coffee, pastries, breakfast and goodie bags. Networking with better posture.",
+      tags: ["Wellness", "Women founders"],
+      url: "https://partiful.com/e/UEGz6r8FPD5TlGtcmdsO",
+      cta: "RSVP"
+    },
+    {
+      day: "2026-10-08",
+      dayLabel: "Thu Oct 8",
+      time: "5:30 to 8:00pm",
+      title: "Next Stop Europe: Transatlantic Tech & AI Exchange",
+      host: "NRW.Global Business with J.P. Morgan Global Passport, CMS and GABA",
+      blurb: "Panel, pitches and drinks on expanding into Europe. J.P. Morgan Client Center, 560 Mission St. Free, bring photo ID.",
+      tags: ["Europe expansion", "Investors", "Free"],
+      url: "https://partiful.com/e/i5NRRQJEobL9JK0kASJ3",
+      cta: "Register"
+    }
+  ];
+
+  // ---- Phase: swap hero from Oct 9 PT. ?phase=post or ?phase=pre to preview ----
+  var now = new Date();
+  var forced = (location.search.match(/[?&]phase=(pre|post)/) || [])[1];
+  var POST_WEEK = forced ? forced === "post" : now >= new Date("2026-10-09T00:00:00-07:00");
+  if (POST_WEEK) document.body.classList.add("post");
+
+  // ---- Links + tracker ----
+  document.querySelectorAll("[data-link]").forEach(function (a) {
+    a.href = LINKS[a.getAttribute("data-link")];
+  });
+  var tl = document.getElementById("trackerLink");
+  tl.href = META_TRACKER.url;
+  document.getElementById("trackerTitle").textContent = META_TRACKER.title;
+  document.getElementById("trackerCredit").textContent = "The most complete list out there. " + META_TRACKER.credit;
+  // after Oct 9 the nav button books the follow-up session
+  if (POST_WEEK) {
+    var navBook = document.querySelector('#nav [data-link="book"]');
+    navBook.href = LINKS.followup;
+    navBook.setAttribute("data-track", "sftw_followup_book");
+  }
+
+  // ---- Render events, grouped by day ----
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function dayIsPast(day) {
+    // a day is over at midnight Pacific
+    var end = new Date(day + "T00:00:00-07:00");
+    end.setDate(end.getDate() + 1);
+    return now >= end;
+  }
+
+  var days = [];
+  var byDay = {};
+  EVENTS.slice().sort(function (a, b) { return a.day < b.day ? -1 : a.day > b.day ? 1 : 0; })
+    .forEach(function (e) {
+      if (!byDay[e.day]) { byDay[e.day] = []; days.push(e.day); }
+      byDay[e.day].push(e);
+    });
+
+  var tabs = "", list = "";
+  days.forEach(function (d) {
+    var evs = byDay[d], past = dayIsPast(d), label = evs[0].dayLabel, id = "day-" + d;
+    tabs += '<a href="#' + id + '"' + (past ? ' class="past"' : "") + ">" + esc(label) + "</a>";
+    list += '<div class="day' + (past ? " past" : "") + '" id="' + id + '">' +
+      "<h3>" + esc(label) + ' <span class="ct">' + evs.length + (evs.length === 1 ? " event" : " events") + "</span>" +
+      (past ? ' <span class="gone">Passed</span>' : "") + "</h3>" +
+      '<div class="ev-list">' + evs.map(function (e) {
+        return '<article class="ev">' +
+          '<div class="t">' + esc(e.time) + "</div>" +
+          "<h4>" + esc(e.title) + "</h4>" +
+          '<p class="host">' + esc(e.host) + "</p>" +
+          '<p class="blurb">' + esc(e.blurb) + "</p>" +
+          '<div class="tags">' + e.tags.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>" +
+          '<a class="btn" href="' + esc(e.url) + '" target="_blank" rel="noopener" data-track="sftw_event_rsvp_click" data-event-title="' + esc(e.title) + '">' + esc(e.cta || "RSVP") + "</a>" +
+          "</article>";
+      }).join("") + "</div></div>";
+  });
+  document.getElementById("dayTabs").innerHTML = tabs;
+  document.getElementById("eventList").innerHTML = list;
+
+  // ---- Calendly links open as a popup; falls back to a new tab if the widget hasn't loaded ----
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest("a[href^='https://calendly.com/']");
+    if (!a || !window.Calendly) return;
+    ev.preventDefault();
+    Calendly.initPopupWidget({ url: a.href });
+  });
+
+  // ---- Click tracking via the existing GTM container ----
+  window.dataLayer = window.dataLayer || [];
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest("[data-track]");
+    if (!a) return;
+    var push = { event: a.getAttribute("data-track"), link_url: a.href };
+    if (a.hasAttribute("data-event-title")) push.event_title = a.getAttribute("data-event-title");
+    window.dataLayer.push(push);
+  });
+
+  // ---- Mobile nav ----
+  var btn = document.getElementById("menuBtn"), nav = document.getElementById("nav");
+  btn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+  nav.addEventListener("click", function (e) { if (e.target.tagName === "A") nav.classList.remove("open"); });
+</script>
+</body>
+</html>
