@@ -36,6 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -472,6 +474,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   document.getElementById("dayTabs").innerHTML = tabs;
   document.getElementById("eventList").innerHTML = list;
+
+  // ---- Calendly links open as a popup; falls back to a new tab if the widget hasn't loaded ----
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest("a[href^='https://calendly.com/']");
+    if (!a || !window.Calendly) return;
+    ev.preventDefault();
+    Calendly.initPopupWidget({ url: a.href });
+  });
 
   // ---- Click tracking via the existing GTM container ----
   window.dataLayer = window.dataLayer || [];
